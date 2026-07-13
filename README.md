@@ -20,16 +20,17 @@ Una vez ejecutado el flujo de despliegue, el sitio queda disponible en:
 - Diagnósticos técnicos gamificados, agendamiento de mentorías y auditoría de
   bienestar laboral.
 
-## Publicación
+## Cómo publicar (una sola vez)
 
-El sitio se despliega automáticamente con **GitHub Actions**
-(`.github/workflows/deploy-pages.yml`) en cada `push` a la rama principal.
-El flujo activa GitHub Pages por sí solo, por lo que no requiere configuración
-manual adicional.
+1. Ve a **Settings → Pages** del repositorio.
+2. En **Source** elige **Deploy from a branch**.
+3. Selecciona la rama `claude/publish-html-6hsm2m` y la carpeta `/ (root)`.
+4. Pulsa **Save**. En 1–2 minutos el sitio queda disponible en la URL de arriba.
+
+A partir de ahí, cada `push` a la rama actualiza el sitio automáticamente.
 
 ## Estructura
 
 - `index.html` — Aplicación completa (HTML, CSS con Tailwind y JavaScript en un
   único archivo autónomo).
-- `.github/workflows/deploy-pages.yml` — Despliegue automático a GitHub Pages.
 - `.nojekyll` — Evita el procesamiento Jekyll para un despliegue más rápido.
