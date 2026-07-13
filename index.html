@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta Joven - Plataforma de Empleabilidad Juvenil de Impacto</title>
+    <!-- Tailwind CSS para diseño moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#030712',
+                            900: '#0A192F',
+                            800: '#112240',
+                            700: '#1B305B',
+                            600: '#233F73',
+                        },
+                        emerald: {
+                            400: '#34D399',
+                            500: '#10B981',
+                            600: '#059669',
+                        },
+                        vibrant: {
+                            purple: '#8B5CF6',
+                            purpleDark: '#6D28D9',
+                            pink: '#EC4899'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(16, 185, 129, 0.2); }
+            50% { box-shadow: 0 0 25px rgba(16, 185, 129, 0.6); }
+        }
+        .glow-active {
+            animation: pulse-glow 2s infinite;
+        }
+        /* Transición suave para simulador */
+        .screen-transition {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 min-h-screen text-slate-100 font-sans flex flex-col items-center justify-start p-2 sm:p-6 overflow-x-hidden selection:bg-emerald-500 selection:text-navy-950">
+
+    <!-- Header Superior Informativo con Alusiones a las Imágenes de Referencia -->
+    <header class="w-full max-w-6xl mb-6 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-4 border-b border-slate-800/80 pb-4">
+        <div>
+            <div class="flex items-center justify-center md:justify-start gap-2.5">
+                <span class="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full text-xs font-bold tracking-wider uppercase">ODS 8: Trabajo Decente</span>
+                <span class="px-2.5 py-1 bg-vibrant-purple/10 text-vibrant-purple border border-vibrant-purple/20 rounded-full text-xs font-bold tracking-wider uppercase">Perú 2026</span>
+            </div>
+            <h1 class="text-3xl font-black tracking-tight text-white mt-2">
+                CONECTA <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-vibrant-purple">JOVEN</span>
+            </h1>
+            <p class="text-xs text-slate-400 mt-1 max-w-xl">
+                Solución integral frente a la informalidad juvenil (72%). Rediseñado para cumplir los hitos del Storyboard de Lucía <span class="text-emerald-400 font-semibold">(WhatsApp Image 2026-07-12 at 19.59.29.jpg)</span> y la ruta de formalidad de <span class="text-emerald-400 font-semibold">WhatsApp Image 2026-07-12 at 19.39.53.jpeg</span>.
+            </p>
+        </div>
+        <div class="flex flex-wrap gap-2.5 justify-center">
+            <button onclick="switchProfile('lucia')" id="btn-profile-lucia" class="px-4 py-2 rounded-xl text-xs font-bold bg-emerald-500 text-navy-950 shadow-lg shadow-emerald-500/10 hover:scale-105 transition-all flex items-center gap-1.5">
+                <i class="fa-solid fa-user-astronaut"></i> Caso Real: Lucía (Villa El Salvador)
+            </button>
+            <button onclick="switchProfile('mateo')" id="btn-profile-mateo" class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 border border-slate-700/85 hover:bg-slate-700 transition-all flex items-center gap-1.5">
+                <i class="fa-solid fa-user-tie"></i> Caso Técnico: Mateo (Sistemas)
+            </button>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL DUAL (Escritorio de Dos Columnas / Móvil Stacking) -->
+    <main class="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+        <!-- COLUMNA 1: INSPECTOR Y SEGUIDOR DE STORYBOARD (Puntos del 1 al 10) -->
+        <section class="lg:col-span-5 bg-navy-900/40 border border-slate-800/80 rounded-[35px] p-5 lg:p-6 backdrop-blur-md flex flex-col h-full lg:max-h-[820px] overflow-y-auto no-scrollbar">
+            <div class="flex items-center gap-2 mb-4">
+                <div class="w-8 h-8 bg-vibrant-purple/10 rounded-xl flex items-center justify-center text-vibrant-purple border border-vibrant-purple/20">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+                <div>
+                    <h2 class="text-sm font-extrabold text-white uppercase tracking-wider">Ecosistema Metodológico</h2>
+                    <p class="text-[10px] text-slate-400">Auditoría del Storyboard en tiempo real</p>
+                </div>
+            </div>
+
+            <!-- Flujo de 10 Pasos interactivos -->
+            <div class="flex flex-col gap-2">
+                <!-- Paso 01 -->
+                <div onclick="triggerStoryboardStep(1)" id="step-card-1" class="p-3 bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 rounded-2xl cursor-pointer transition-all flex items-start gap-3 border-l-4 border-l-red-500">
+                    <div class="w-6 h-6 rounded-full bg-red-500/10 text-red-400 font-bold text-xs flex items-center justify-center shrink-0 border border-red-500/20">01</div>
+                    <div>
+                        <h3 class="text-xs font-extrabold text-slate-200">El Problema Central (72% Informalidad)</h3>
+                        <p class="text-[10px] text-slate-400 leading-normal mt-0.5">Jóvenes de 18-29 años sin experiencia son empujados a empleos sin derechos.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 02 -->
+                <div onclick="triggerStoryboardStep(2)" id="step-card-2" class="p-3 bg-slate-900/30 hover:bg-slate-900 border border-slate-800/40 rounded-2xl cursor-pointer transition-all flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 font-bold text-xs flex items-center justify-center shrink-0 border border-slate-700/60">02</div>
+                    <div>
+                        <h3 class="text-xs font-bold text-slate-300">Descarga y Registro Express (12 Minutos)</h3>
+                        <p class="text-[10px] text-slate-400 leading-normal mt-0.5">La app mapea el potencial inmediato eliminando barreras geográficas y de currículum.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 03 -->
+                <div onclick="triggerStoryboardStep(3)" id="step-card-3" class="p-3 bg-slate-900/30 hover:bg-slate-900 border border-slate-800/40 rounded-2xl cursor-pointer transition-all flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 font-bold text-xs flex items-center justify-center shrink-0 border border-slate-700/60">03</div>
+                    <div>
+                        <h3 class="text-xs font-bold text-slate-300">Diagnóstico de Fit Técnico Inicial</h3>
+                        <p class="text-[10px] text-slate-400 leading-normal mt-0.5">IA evalúa micro-competencias lógicas aplicadas. Lucía inicia con 38% de adecuación.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 04 -->
+                <div onclick="triggerStoryboardStep(4)" id="step-card-4" class="p-3 bg-slate-900/30 hover:bg-slate-900 border border-slate-800/40 rounded-2xl cursor-pointer transition-all flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 font-bold text-xs flex items-center justify-center shrink-0 border border-slate-700/60">04</div>
+                    <div>
+                        <h3 class="text-xs font-bold text-slate-300">Patrocinio Empresarial al 100%</h3>
+                        <p class="text-[10px] text-slate-400 leading-normal mt-0.5">Empresas peruanas financian el aprendizaje técnico para garantizar su talento directo.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 05 -->
+                <div onclick="triggerStoryboardStep(5)" id="step-card-5" class="p-3 bg-slate-900/30 hover:bg-slate-900 border border-slate-800/40 rounded-2xl cursor-pointer transition-all flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 font-bold text-xs flex items-center justify-center shrink-0 border border-slate-700/60">05</div>
+                    <div>
+                        <h3 class="text-xs font-bold text-slate-300">Módulos Técnicos en Aplicativo</h3>
+                        <p class="text-[10px] text-slate-400 leading-normal mt-0.5">Micro-módulos prácticos de 6 semanas con proyectos reales evaluados por el empleador.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 06 -->
+                <div onclick="triggerStoryboardStep(6)" id="step-card-6" class="p-3 bg-slate-900/30 hover:bg-slate-900 border border-slate-800/40 rounded-2xl cursor-pointer transition-all flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 font-bold text-xs flex items-center justify-center shrink-0 border border-slate-700/60">06</div>
+                    <div>
+                        <h3 class="text-xs font-bold text-slate-300">Incremento de Fit en Tiempo Real</h3>
+                        <p class="text-[10px] text-slate-400 leading-normal mt-0.5">La adecuación del egresado sube de 38% a 91% en el radar del área de selección.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 07 -->
+                <div onclick="triggerStoryboardStep(7)" id="step-card-7" class="p-3 bg-slate-900/30 hover:bg-slate-900 border border-slate-800/40 rounded-2xl cursor-pointer transition-all flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 font-bold text-xs flex items-center justify-center shrink-0 border border-slate-700/60">07</div>
+                    <div>
+                        <h3 class="text-xs font-bold text-slate-300">Algoritmo Inteligente Conecta-Talento</h3>
+                        <p class="text-[10px] text-slate-400 leading-normal mt-0.5">Cruce de ubicación, cultura y habilidades. Recibe 3 ofertas formales en 48 horas.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 08 -->
+                <div onclick="triggerStoryboardStep(8)" id="step-card-8" class="p-3 bg-slate-900/30 hover:bg-slate-900 border border-slate-800/40 rounded-2xl cursor-pointer transition-all flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 font-bold text-xs flex items-center justify-center shrink-0 border border-slate-700/60">08</div>
+                    <div>
+                        <h3 class="text-xs font-bold text-slate-300">Contrato Formal Verificado</h3>
+                        <p class="text-[10px] text-slate-400 leading-normal mt-0.5">Generación en app con validación legal: CTS, Seguro EsSalud, AFP y vacaciones.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 09 -->
+                <div onclick="triggerStoryboardStep(9)" id="step-card-9" class="p-3 bg-slate-900/30 hover:bg-slate-900 border border-slate-800/40 rounded-2xl cursor-pointer transition-all flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 font-bold text-xs flex items-center justify-center shrink-0 border border-slate-700/60">09</div>
+                    <div>
+                        <h3 class="text-xs font-bold text-slate-300">Monitoreo Clínico y Clima Laboral</h3>
+                        <p class="text-[10px] text-slate-400 leading-normal mt-0.5">Evaluación periódica anónima para resguardar la salud mental y erradicar irregularidades.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 10 -->
+                <div onclick="triggerStoryboardStep(10)" id="step-card-10" class="p-3 bg-slate-900/30 hover:bg-slate-900 border border-slate-800/40 rounded-2xl cursor-pointer transition-all flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 font-bold text-xs flex items-center justify-center shrink-0 border border-slate-700/60">10</div>
+                    <div>
+                        <h3 class="text-xs font-bold text-slate-300">Empleo Digno, Seguro y Futuro</h3>
+                        <p class="text-[10px] text-slate-400 leading-normal mt-0.5">Estabilidad laboral real, crecimiento salarial y empoderamiento profesional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COLUMNA 2: EL SIMULADOR MÓVIL EN VIVO (Conecta Joven App) -->
+        <section class="lg:col-span-7 flex flex-col items-center justify-center w-full">
+            
+            <div class="relative w-full max-w-[395px] h-[812px] bg-slate-950 rounded-[55px] border-[12px] border-slate-800 shadow-2xl overflow-hidden flex flex-col outline outline-2 outline-offset-1 outline-slate-700 glow-active">
+                
+                <!-- Isla dinámica superior (Notch moderno) -->
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-800 rounded-b-2xl z-50 flex items-center justify-center">
+                    <div class="w-2.5 h-2.5 rounded-full bg-slate-950 mr-2 border border-slate-800"></div>
+                    <div class="w-10 h-1 rounded-full bg-slate-950"></div>
+                </div>
+
+                <!-- Barra de estado con reloj en tiempo real -->
+                <div class="h-10 px-6 pt-3 flex justify-between items-center text-xs font-semibold text-slate-400 z-40 bg-slate-950">
+                    <span id="phone-time" class="tracking-wide">12:30</span>
+                    <div class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-signal text-[10px]"></i>
+                        <span class="text-[9px] font-bold tracking-wider">5G</span>
+                        <i class="fa-solid fa-wifi text-[10px]"></i>
+                        <i class="fa-solid fa-battery-three-quarters text-[11px]"></i>
+                    </div>
+                </div>
+
+                <!-- Notificaciones de la Aplicación (Toasts Personalizados) -->
+                <div id="toast-notification" class="absolute top-12 left-3 right-3 bg-slate-900/95 border border-slate-800 p-3.5 rounded-2xl shadow-xl z-50 transform -translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+                    <div class="flex items-start gap-3">
+                        <div class="text-emerald-400 mt-0.5 text-base" id="toast-icon">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-xs font-black text-slate-100" id="toast-title">Notificación</h4>
+                            <p class="text-[10px] text-slate-400 mt-0.5 leading-relaxed" id="toast-msg">Mensaje descriptivo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTENEDOR DE PANTALLAS (Scroll oculto) -->
+                <div id="screen-container" class="flex-1 overflow-y-auto no-scrollbar relative bg-slate-950 pb-20 screen-transition">
+
+                    <!-- ================= PANTALLA 1: ONBOARDING CAROUSEL ================= -->
+                    <div id="screen-onboarding" class="screen flex flex-col justify-between h-full p-6 text-center">
+                        <div class="flex justify-center gap-1.5 mt-8">
+                            <span class="step-dot w-6 h-1.5 rounded-full bg-emerald-500 transition-all duration-300" id="dot-0"></span>
+                            <span class="step-dot w-2 h-1.5 rounded-full bg-slate-700 transition-all duration-300" id="dot-1"></span>
+                            <span class="step-dot w-2 h-1.5 rounded-full bg-slate-700 transition-all duration-300" id="dot-2"></span>
+                        </div>
+
+                        <!-- Slide Dinámico -->
+                        <div class="my-auto transition-all duration-300">
+                            <div id="onboarding-slide-content" class="px-2">
+                                <!-- Se rellena dinámicamente con JS -->
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-3">
+                            <button id="btn-next-onboarding" onclick="nextOnboarding()" class="w-full py-4 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black rounded-2xl shadow-lg shadow-emerald-500/20 active:scale-95 transition-all text-xs uppercase tracking-wider">
+                                Siguiente <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </button>
+                            <button onclick="skipOnboarding()" class="text-xs text-slate-400 font-bold py-2 hover:text-white transition-colors">
+                                Omitir Introducción
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ================= PANTALLA 2: DASHBOARD PRINCIPAL ================= -->
+                    <div id="screen-dashboard" class="screen hidden p-5">
+                        <!-- Perfil e Indicadores -->
+                        <div class="flex justify-between items-center mb-5">
+                            <div>
+                                <p class="text-[9px] uppercase font-bold tracking-widest text-emerald-400">Plataforma Perú</p>
+                                <h2 class="text-base font-black text-white flex items-center gap-1.5">
+                                    <span id="dash-user-name">Hola, Lucía</span> <i class="fa-solid fa-circle-check text-emerald-400 text-xs"></i>
+                                </h2>
+                            </div>
+                            <!-- Estado de Bienestar -->
+                            <button onclick="openWellnessModal()" class="flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 border border-slate-800 py-1.5 px-3 rounded-full text-[10px] font-extrabold text-slate-300 transition-all">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                <span id="dash-wellness-status">Bienestar: 100%</span>
+                            </button>
+                        </div>
+
+                        <!-- Tarjeta de Diagnóstico Técnico / Fit Directo -->
+                        <div class="bg-gradient-to-br from-navy-900 to-slate-900 border border-slate-800/80 rounded-[28px] p-4.5 mb-5 shadow-inner">
+                            <div class="flex justify-between items-start mb-2.5">
+                                <div>
+                                    <h3 class="text-xs font-black text-white">Adecuación General Registrada</h3>
+                                    <p class="text-[9px] text-slate-400 mt-0.5">Indicador dinámico para gerentes de reclutamiento</p>
+                                </div>
+                                <span id="txt-badge-performance" class="text-[8px] font-black uppercase bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded-md border border-emerald-500/10">Básico</span>
+                            </div>
+                            
+                            <div class="flex items-center gap-4 my-3">
+                                <div class="relative w-12 h-12 flex items-center justify-center bg-slate-950 rounded-full border border-slate-800">
+                                    <span id="txt-score-performance" class="text-xs font-black text-emerald-400">38%</span>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="w-full bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800/80">
+                                        <div id="bar-performance-fill" class="bg-gradient-to-r from-emerald-500 to-vibrant-purple h-full rounded-full transition-all duration-1000" style="width: 38%;"></div>
+                                    </div>
+                                    <p class="text-[9px] text-slate-400 mt-2 leading-relaxed" id="txt-eval-feedback">
+                                        Completa los micro-módulos para elevar tu visibilidad frente a corporaciones aliadas.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ruta de Progreso Gamificado -->
+                        <div class="bg-slate-900/50 border border-slate-800/60 rounded-[28px] p-4 mb-5 relative overflow-hidden">
+                            <div class="flex justify-between items-center text-xs text-slate-400 mb-2">
+                                <span class="font-extrabold text-slate-200">Siguiente hito salarial</span>
+                                <span id="txt-xp-indicator" class="font-black text-emerald-400">38% Completado</span>
+                            </div>
+                            <div class="w-full bg-slate-950 rounded-full h-2.5 mb-3 border border-slate-800 p-0.5">
+                                <div id="dashboard-progress-fill" class="bg-gradient-to-r from-emerald-400 to-vibrant-purple h-full rounded-full transition-all duration-1000" style="width: 38%;"></div>
+                            </div>
+                            <div class="flex items-start gap-2.5 bg-slate-950/60 p-3 rounded-xl border border-slate-800/80">
+                                <i class="fa-solid fa-graduation-cap text-vibrant-purple text-xs mt-0.5 animate-bounce"></i>
+                                <span class="text-[9px] text-slate-300 leading-normal" id="dash-action-hint">
+                                    Inicia el desafío <strong class="text-white">"Fundamentos Lógicos"</strong> para calificar a vacantes sin requerimiento de experiencia en <strong class="text-emerald-400">Logística Andina</strong>.
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Widget de Agenda Activa -->
+                        <div id="widget-mentorship" class="hidden bg-slate-900 border border-emerald-500/20 rounded-2xl p-3.5 mb-5 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 border border-emerald-500/10">
+                                    <i class="fa-solid fa-calendar-check text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-[11px] font-black text-white">Sesión agendada</h4>
+                                    <p class="text-[9px] text-slate-400" id="widget-mentor-detail">Con la Dra. Elena Ramos</p>
+                                </div>
+                            </div>
+                            <button onclick="cancelMentorship()" class="text-[9px] text-red-400 hover:text-red-300 font-extrabold px-2.5 py-1.5 bg-slate-950/60 rounded-xl border border-slate-800">
+                                Cancelar
+                            </button>
+                        </div>
+
+                        <!-- Listas de Vacantes de la Comunidad -->
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-[10px] font-black uppercase tracking-widest text-slate-400">Vacantes Verificadas</h3>
+                            <span onclick="openAllJobsModal()" class="text-[10px] text-vibrant-purple font-extrabold cursor-pointer hover:text-white transition-all flex items-center gap-1">Ver todo <i class="fa-solid fa-arrow-up-right-from-square text-[8px]"></i></span>
+                        </div>
+
+                        <!-- Contenedor Horizontal para Vacantes sugeridas -->
+                        <div class="flex gap-4 overflow-x-auto no-scrollbar pb-1" id="dash-jobs-carousel">
+                            <!-- Se inyecta dinámicamente con JS -->
+                        </div>
+
+                        <!-- Sección de Mentores de Integración -->
+                        <div class="mt-5">
+                            <h3 class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-3">Tu Red de Apoyo Directo</h3>
+                            <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-3 flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 bg-vibrant-purple/10 rounded-full flex items-center justify-center text-vibrant-purple border border-vibrant-purple/20">
+                                        <i class="fa-solid fa-handshake-angle text-base"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-[11px] font-black text-white">Psicología & Soporte Legal</h4>
+                                        <p class="text-[9px] text-slate-400">Apoyo legal gratuito e integración segura.</p>
+                                    </div>
+                                </div>
+                                <button onclick="navigateTo('mentors')" class="px-3 py-1.5 bg-slate-950 text-vibrant-purple hover:text-white hover:bg-slate-900 border border-slate-800 rounded-xl text-[10px] font-black transition-all">
+                                    Entrar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ================= PANTALLA 3: DETALLE DEL EMPLEO ================= -->
+                    <div id="screen-job-detail" class="screen hidden p-5">
+                        <button onclick="navigateTo('dashboard')" class="flex items-center gap-1.5 text-[10px] font-extrabold text-slate-400 hover:text-white mb-4 transition-all">
+                            <i class="fa-solid fa-arrow-left"></i> Volver a sugerencias
+                        </button>
+
+                        <div class="bg-slate-900/60 border border-slate-800/80 rounded-3xl p-5 mb-4 text-center">
+                            <div class="flex justify-center mb-2.5">
+                                <span class="text-[8px] font-black bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full flex items-center gap-1.5 uppercase tracking-wider">
+                                    <i class="fa-solid fa-shield"></i> Empleo Formal Autenticado
+                                </span>
+                            </div>
+                            <h3 class="text-base font-black text-white" id="detail-title">Cargando...</h3>
+                            <p class="text-xs text-slate-400 mt-1" id="detail-company">Cargando...</p>
+                            <p class="text-xs text-emerald-400 font-extrabold mt-2" id="detail-salary">S/ 1,500 + Beneficios Completos</p>
+                        </div>
+
+                        <!-- Evaluación de Fit Técnico para este puesto -->
+                        <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-4 mb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-xs font-extrabold text-white">Tu Fit Evaluado para el Puesto</h4>
+                                <span id="txt-detail-fit" class="text-xs font-black text-emerald-400">38%</span>
+                            </div>
+                            <div class="w-full bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800/80">
+                                <div id="bar-detail-fit" class="bg-gradient-to-r from-emerald-400 to-vibrant-purple h-full" style="width: 38%;"></div>
+                            </div>
+                            <p class="text-[9px] text-slate-400 mt-2.5 leading-normal" id="txt-detail-fit-explanation">
+                                Completa la especialización solicitada para asegurar tu contratación directa.
+                            </p>
+                        </div>
+
+                        <!-- Especializaciones Patrocinadas (Módulos) -->
+                        <h4 class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Formación Patrocinada por Empresa</h4>
+                        <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-3 mb-4">
+                            <p class="text-[9px] text-slate-400 mb-2.5 leading-relaxed">Módulo completamente financiado al 100% por el empleador al aprobar el diagnóstico:</p>
+                            <div class="space-y-2" id="container-detail-courses">
+                                <!-- Se rellena dinámicamente -->
+                            </div>
+                        </div>
+
+                        <!-- Contrato Modelo de Trabajo (Verificación de Ley en Perú) -->
+                        <h4 class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Tus Beneficios por Ley (Regimen General)</h4>
+                        <div class="flex flex-col gap-2 mb-6">
+                            <div class="bg-slate-900/40 border border-slate-800/60 rounded-xl p-3 flex items-start gap-3">
+                                <i class="fa-solid fa-hospital-user text-emerald-400 text-sm mt-0.5 shrink-0"></i>
+                                <div>
+                                    <h5 class="text-[10px] font-bold text-white">EsSalud Soportado al 100%</h5>
+                                    <p class="text-[9px] text-slate-400 leading-normal">9% de aportación patronal directa para cobertura médica tuya y de tus familiares.</p>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900/40 border border-slate-800/60 rounded-xl p-3 flex items-start gap-3">
+                                <i class="fa-solid fa-piggy-bank text-emerald-400 text-sm mt-0.5 shrink-0"></i>
+                                <div>
+                                    <h5 class="text-[10px] font-bold text-white">Depósito Semestral de CTS</h5>
+                                    <p class="text-[9px] text-slate-400 leading-normal">Compensación por Tiempo de Servicios equivalente a un sueldo anual depositado en Mayo y Noviembre.</p>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900/40 border border-slate-800/60 rounded-xl p-3 flex items-start gap-3">
+                                <i class="fa-solid fa-umbrella text-emerald-400 text-sm mt-0.5 shrink-0"></i>
+                                <div>
+                                    <h5 class="text-[10px] font-bold text-white">Gratificaciones Legales y CTS</h5>
+                                    <p class="text-[9px] text-slate-400 leading-normal">Dos gratificaciones completas al año (Fiestas Patrias en Julio y Navidad en Diciembre).</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botón de Envío Seguro -->
+                        <button id="btn-apply-job" onclick="applyToCurrentJob()" class="w-full py-4 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black rounded-2xl shadow-lg active:scale-95 transition-all text-xs uppercase tracking-wider">
+                            Postulación Formal Directa
+                        </button>
+                    </div>
+
+                    <!-- ================= PANTALLA 4: HUB DE MENTORES ================= -->
+                    <div id="screen-mentors" class="screen hidden p-5">
+                        <div class="mb-5">
+                            <p class="text-[9px] uppercase font-bold tracking-widest text-vibrant-purple">Acompañamiento Integral</p>
+                            <h2 class="text-base font-black text-white">Asesores de Integración</h2>
+                            <p class="text-[10px] text-slate-400 mt-0.5 leading-relaxed">Conecta de forma segura para agendar mentorías y asegurar que se respeten tus derechos laborales.</p>
+                        </div>
+
+                        <!-- Lista de Mentores -->
+                        <div class="grid grid-cols-2 gap-3" id="mentors-list">
+                            <!-- Se genera con JS -->
+                        </div>
+                    </div>
+
+                    <!-- ================= PANTALLA 5: MI RUTA DE APRENDIZAJE ================= -->
+                    <div id="screen-route" class="screen hidden p-5">
+                        <div class="mb-5">
+                            <p class="text-[9px] uppercase font-bold tracking-widest text-emerald-400">Progreso Profesional</p>
+                            <h2 class="text-base font-black text-white">Mapa de Aprendizaje</h2>
+                            <p class="text-[10px] text-slate-400 mt-0.5 leading-relaxed">Aprende habilidades específicas bajo financiamiento corporativo sin costo alguno para ti.</p>
+                        </div>
+
+                        <!-- Módulo de Habilidades en Vertical -->
+                        <div class="flex flex-col gap-6 relative pl-6 border-l-2 border-slate-800" id="career-timeline">
+                            <!-- Se inyecta dinámicamente con JS -->
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- BARRA DE NAVEGACIÓN INFERIOR MÓVIL -->
+                <nav class="absolute bottom-0 left-0 right-0 h-16 bg-slate-950 border-t border-slate-900/90 flex justify-around items-center px-2 z-40" id="main-nav" style="display: none;">
+                    <button onclick="navigateTo('dashboard')" id="nav-dashboard" class="flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-emerald-400 transition-colors w-14">
+                        <i class="fa-solid fa-house text-sm"></i>
+                        <span class="text-[8px] font-extrabold tracking-wider">Inicio</span>
+                    </button>
+                    <button onclick="navigateTo('job-detail')" id="nav-job-detail" class="flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-emerald-400 transition-colors w-14">
+                        <i class="fa-solid fa-briefcase text-sm"></i>
+                        <span class="text-[8px] font-extrabold tracking-wider">Empleos</span>
+                    </button>
+                    <button onclick="navigateTo('mentors')" id="nav-mentors" class="flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-emerald-400 transition-colors w-14">
+                        <i class="fa-solid fa-user-group text-sm"></i>
+                        <span class="text-[8px] font-extrabold tracking-wider">Red</span>
+                    </button>
+                    <button onclick="navigateTo('route')" id="nav-route" class="flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-emerald-400 transition-colors w-14">
+                        <i class="fa-solid fa-map-location-dot text-sm"></i>
+                        <span class="text-[8px] font-extrabold tracking-wider">Mi Ruta</span>
+                    </button>
+                </nav>
+
+                <!-- ================= MODALES DEL SIMULADOR MÓVIL ================= -->
+                
+                <!-- Modal: Booking de Citas -->
+                <div id="modal-booking" class="hidden absolute inset-0 bg-slate-950/90 z-50 flex flex-col justify-end">
+                    <div class="bg-slate-900 border-t border-slate-800 rounded-t-[35px] p-6">
+                        <div class="w-10 h-1.5 bg-slate-700 rounded-full mx-auto mb-4"></div>
+                        <h3 class="text-sm font-black text-slate-100 mb-1">Agendar Sesión de Soporte</h3>
+                        <p class="text-[10px] text-slate-400 mb-4" id="booking-mentor-name">Cargando...</p>
+                        
+                        <label class="text-[8px] font-black uppercase tracking-widest text-slate-300 block mb-2">Selecciona un Día</label>
+                        <div class="flex gap-2.5 mb-4">
+                            <button onclick="selectBookingDate('Mañana')" class="date-btn flex-1 py-2.5 text-center text-[10px] bg-slate-950 border border-slate-800 hover:border-emerald-500 rounded-xl text-slate-200 font-bold focus:border-emerald-500 transition-all">
+                                Mañana
+                            </button>
+                            <button onclick="selectBookingDate('Pasado Mañana')" class="date-btn flex-1 py-2.5 text-center text-[10px] bg-slate-950 border border-slate-800 hover:border-emerald-500 rounded-xl text-slate-200 font-bold focus:border-emerald-500 transition-all">
+                                Pasado Mañana
+                            </button>
+                        </div>
+
+                        <label class="text-[8px] font-black uppercase tracking-widest text-slate-300 block mb-2">Horarios Disponibles</label>
+                        <div class="grid grid-cols-3 gap-2 mb-6">
+                            <button onclick="selectBookingTime('09:00 AM')" class="time-btn py-2 text-center text-[10px] bg-slate-950 border border-slate-800 hover:border-emerald-500 rounded-lg text-slate-300 focus:border-emerald-500 transition-all">09:00 AM</button>
+                            <button onclick="selectBookingTime('11:00 AM')" class="time-btn py-2 text-center text-[10px] bg-slate-950 border border-slate-800 hover:border-emerald-500 rounded-lg text-slate-300 focus:border-emerald-500 transition-all">11:00 AM</button>
+                            <button onclick="selectBookingTime('04:00 PM')" class="time-btn py-2 text-center text-[10px] bg-slate-950 border border-slate-800 hover:border-emerald-500 rounded-lg text-slate-300 focus:border-emerald-500 transition-all">04:00 PM</button>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <button onclick="closeBookingModal()" class="flex-1 py-3 bg-slate-950 hover:bg-slate-800 text-slate-400 font-bold rounded-2xl text-[10px] uppercase border border-slate-800 transition-all">
+                                Cancelar
+                            </button>
+                            <button onclick="confirmBooking()" class="flex-1 py-3 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black rounded-2xl text-[10px] uppercase transition-all">
+                                Agendar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal: Diagnóstico Técnico / Quiz Interactivo -->
+                <div id="modal-quiz" class="hidden absolute inset-0 bg-slate-950 z-50 flex flex-col justify-between p-6">
+                    <div>
+                        <div class="flex justify-between items-center mt-4 mb-4">
+                            <span class="text-[8px] font-black text-vibrant-purple uppercase tracking-widest" id="quiz-header-title">Especialización Técnica</span>
+                            <button onclick="closeQuiz()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+                        </div>
+
+                        <div class="w-full bg-slate-900 rounded-full h-1.5 mb-6">
+                            <div id="quiz-progress" class="bg-vibrant-purple h-full rounded-full w-0 transition-all"></div>
+                        </div>
+
+                        <div id="quiz-question-area" class="transition-opacity duration-300">
+                            <!-- Se genera con JS -->
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <button onclick="closeQuiz()" class="flex-1 py-3 bg-slate-900 text-slate-400 font-bold rounded-2xl text-[10px] uppercase transition-all">
+                            Salir
+                        </button>
+                        <button id="btn-quiz-action" onclick="submitQuizAnswer()" class="flex-1 py-3 bg-vibrant-purple hover:bg-vibrant-purpleDark text-white font-black rounded-2xl text-[10px] uppercase transition-all">
+                            Siguiente
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Modal: Monitoreo Clínico / Clima Laboral (Paso 09) -->
+                <div id="modal-wellness" class="hidden absolute inset-0 bg-slate-950/90 z-50 flex flex-col justify-end">
+                    <div class="bg-slate-900 border-t border-slate-800 rounded-t-[35px] p-6">
+                        <div class="w-10 h-1.5 bg-slate-700 rounded-full mx-auto mb-4"></div>
+                        <h3 class="text-sm font-black text-slate-100 mb-1 flex items-center gap-1.5">
+                            <i class="fa-solid fa-shield-halved text-emerald-400"></i> Auditoría Semanal de Bienestar
+                        </h3>
+                        <p class="text-[10px] text-slate-400 mb-4 leading-relaxed">Mapeamos de manera anónima tu clima laboral para que tu incorporación cumpla con las leyes peruanas.</p>
+
+                        <div class="space-y-4 mb-6">
+                            <div>
+                                <label class="text-[9px] font-bold text-slate-300 block mb-2">1. ¿Se están respetando tus 8 horas de trabajo legal?</label>
+                                <div class="flex justify-around bg-slate-950 p-2 rounded-xl border border-slate-800">
+                                    <button onclick="selectWellnessChoice(1, 'Si')" class="w-10 h-10 rounded-xl hover:bg-slate-900 text-lg focus:bg-emerald-500/20">👍</button>
+                                    <button onclick="selectWellnessChoice(1, 'No')" class="w-10 h-10 rounded-xl hover:bg-slate-900 text-lg focus:bg-red-500/20">👎</button>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="text-[9px] font-bold text-slate-300 block mb-2">2. ¿El trato por parte de tus supervisores es digno?</label>
+                                <div class="flex justify-around bg-slate-950 p-2 rounded-xl border border-slate-800">
+                                    <button onclick="selectWellnessChoice(2, 'Excelente')" class="w-10 h-10 rounded-xl hover:bg-slate-900 text-lg focus:bg-emerald-500/20">😁</button>
+                                    <button onclick="selectWellnessChoice(2, 'Regular')" class="w-10 h-10 rounded-xl hover:bg-slate-900 text-lg focus:bg-yellow-500/20">😐</button>
+                                    <button onclick="selectWellnessChoice(2, 'Incomodo')" class="w-10 h-10 rounded-xl hover:bg-slate-900 text-lg focus:bg-red-500/20">🙁</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <button onclick="closeWellnessModal()" class="flex-1 py-3 bg-slate-950 hover:bg-slate-800 text-slate-400 font-bold rounded-2xl text-[10px] uppercase border border-slate-800 transition-all">
+                                Cancelar
+                            </button>
+                            <button onclick="submitWellnessCheck()" class="flex-1 py-3 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black rounded-2xl text-[10px] uppercase transition-all">
+                                Enviar Reporte Seguro
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal: Explorar Todas las Vacantes -->
+                <div id="modal-all-jobs" class="hidden absolute inset-0 bg-slate-950 z-50 flex flex-col p-5">
+                    <div class="flex justify-between items-center mb-5 mt-4">
+                        <div>
+                            <p class="text-[8px] uppercase font-bold tracking-widest text-vibrant-purple">Portal de Empleabilidad</p>
+                            <h3 class="text-sm font-black text-white">Todos los Puestos Verificados</h3>
+                        </div>
+                        <button onclick="closeAllJobsModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+                    </div>
+
+                    <div class="flex-1 overflow-y-auto no-scrollbar space-y-3" id="all-jobs-list">
+                        <!-- Se llena con JS -->
+                    </div>
+
+                    <button onclick="closeAllJobsModal()" class="w-full mt-4 py-3.5 bg-slate-900 text-slate-300 font-extrabold rounded-2xl text-xs hover:bg-slate-800 transition-all">
+                        Cerrar Portal
+                    </button>
+                </div>
+
+            </div>
+            
+            <p class="text-[10px] text-slate-500 mt-4 text-center max-w-[395px] leading-relaxed">
+                <i class="fa-solid fa-circle-info mr-1"></i> Diseñado en base a los ODS y directrices de empleo formal del MTPE. Utiliza el inspector izquierdo para evaluar cada uno de los 10 pasos metodológicos del sistema.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- ================= MOTOR DE ESTADOS JAVASCRIPT ================= -->
+    <script>
+        // --- Web Audio API para Efectos de Sonido Autónomos (Sin dependencias externas) ---
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        
+        function playBeep(type) {
+            try {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                if (type === 'success') {
+                    osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+                    gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.3);
+                    
+                    // Doble tono para éxito
+                    setTimeout(() => {
+                        const osc2 = audioCtx.createOscillator();
+                        const gain2 = audioCtx.createGain();
+                        osc2.connect(gain2);
+                        gain2.connect(audioCtx.destination);
+                        osc2.frequency.setValueAtTime(659.25, audioCtx.currentTime); // E5
+                        gain2.gain.setValueAtTime(0.1, audioCtx.currentTime);
+                        gain2.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
+                        osc2.start();
+                        osc2.stop(audioCtx.currentTime + 0.4);
+                    }, 80);
+                } else if (type === 'tap') {
+                    osc.frequency.setValueAtTime(440, audioCtx.currentTime); // A4
+                    gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.1);
+                } else if (type === 'error') {
+                    osc.frequency.setValueAtTime(180, audioCtx.currentTime);
+                    gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.4);
+                }
+            } catch (e) {
+                console.log('Audio Context bloqueado o no soportado.', e);
+            }
+        }
+
+        // --- Reloj del simulador móvil ---
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours().toString().padStart(2, '0');
+            let minutes = now.getMinutes().toString().padStart(2, '0');
+            document.getElementById('phone-time').innerText = `${hours}:${minutes}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // --- Base de Datos del Negocio y Datos Dinámicos ---
+        const profiles = {
+            lucia: {
+                name: 'Lucía Alvarado',
+                initialFit: 38,
+                location: 'Villa El Salvador, Lima',
+                skills: ['onboarding'],
+                badge: 'Nivel Inicial',
+                feedback: 'Logística Andina requiere validar tu módulo lógico para activar el patrocinio laboral.',
+                timelineHint: 'Rinde el desafío técnico patrocinado por Logística Andina para elevar tu fit laboral.'
+            },
+            mateo: {
+                name: 'Mateo Quispe',
+                initialFit: 52,
+                location: 'Los Olivos, Lima',
+                skills: ['onboarding'],
+                badge: 'Técnico Básico',
+                feedback: 'BCP ha pre-identificado tus competencias en modelamiento para el puesto asistencial.',
+                timelineHint: 'Completa la prueba de "Diseño UX/UI" para elevar tus probabilidades al 100%.'
+            }
+        };
+
+        const onboardingSlides = [
+            {
+                icon: '<i class="fa-solid fa-users text-4xl text-emerald-400"></i>',
+                title: 'Trabajo Formal <span class="text-emerald-400">Garantizado</span>',
+                desc: 'Cumplimos rigurosamente con los 5 beneficios de ley de la normativa peruana. CTS, EsSalud, AFP, vacaciones pagadas y Seguro de Vida Ley.'
+            },
+            {
+                icon: '<i class="fa-solid fa-rocket text-4xl text-vibrant-purple"></i>',
+                title: 'Patrocinio al <span class="text-vibrant-purple">100% Sin Costos</span>',
+                desc: 'Nuestros empleadores asociados financian en su totalidad las competencias que te faltan. Estudias gratis y te integras de forma inmediata.'
+            },
+            {
+                icon: '<i class="fa-solid fa-shield-heart text-4xl text-emerald-400"></i>',
+                title: 'Seguimiento Contra el <span class="text-emerald-400">Abuso e Informalidad</span>',
+                desc: 'Monitoreamos tu experiencia en el puesto para asegurar un trato digno, respetando siempre las 8 horas laborales estipuladas.'
+            }
+        ];
+
+        const jobsData = [
+            {
+                id: 0,
+                title: 'Auxiliar de Logística y Distribución',
+                company: 'Logística Andina S.A.C.',
+                salary: 'S/ 1,550 + CTS + Gratificación',
+                type: 'Callao (Presencial)',
+                baseMatch: 38,
+                boostSkill: 'logic_101',
+                skillsReq: [
+                    { name: 'Lógica Operativa', code: 'logic_101', sponsor: 'Logística Andina' },
+                    { name: 'Inventario en Excel', code: 'excel_basic', sponsor: 'Conecta Joven' }
+                ],
+                tag: 'Cero Experiencia'
+            },
+            {
+                id: 1,
+                title: 'Asistente de Procesos y UML',
+                company: 'Intercorp',
+                salary: 'S/ 2,800 + Beneficios Completos',
+                type: 'Lima (Híbrido)',
+                baseMatch: 45,
+                boostSkill: 'logic_101',
+                skillsReq: [
+                    { name: 'Lógica Operativa', code: 'logic_101', sponsor: 'Intercorp' },
+                    { name: 'Modelado UML básico', code: 'uml_basic', sponsor: 'Intercorp' }
+                ],
+                tag: 'Cero Experiencia'
+            },
+            {
+                id: 2,
+                title: 'Asistente Técnico de UX',
+                company: 'BCP',
+                salary: 'S/ 2,400 + EPS Soportada',
+                type: 'Lima (Remoto)',
+                baseMatch: 50,
+                boostSkill: 'ux_fundamentals',
+                skillsReq: [
+                    { name: 'Fundamentos de Figma', code: 'ux_fundamentals', sponsor: 'BCP' },
+                    { name: 'Arquitectura UX básica', code: 'ux_arch', sponsor: 'BCP' }
+                ],
+                tag: 'Cero Experiencia'
+            }
+        ];
+
+        const quizDatabases = {
+            logic_101: [
+                {
+                    title: '1. ¿Cuál es el orden secuencial correcto para despachar un lote logístico?',
+                    options: [
+                        'Control de calidad -> Empaque -> Registro en sistema -> Envío',
+                        'Envío -> Registro -> Control de calidad',
+                        'Registro -> Envío -> Empaque'
+                    ],
+                    correct: 0
+                },
+                {
+                    title: '2. Si un almacén recibe 12 cajas de 15 productos cada una, y despacha 3 cajas completas, ¿cuántos productos quedan?',
+                    options: [
+                        '9 productos',
+                        '135 productos',
+                        '150 productos'
+                    ],
+                    correct: 1
+                }
+            ],
+            ux_fundamentals: [
+                {
+                    title: '1. ¿Cuál es la principal prioridad del Diseño Centrado en el Usuario (UCD)?',
+                    options: [
+                        'Maximizar el uso de animaciones complejas',
+                        'Entender y satisfacer las necesidades reales del usuario final',
+                        'Minimizar el uso de colores en la interfaz'
+                    ],
+                    correct: 1
+                },
+                {
+                    title: '2. ¿Qué herramienta se emplea habitualmente para trazar la estructura inicial esquemática de una pantalla?',
+                    options: [
+                        'Wireframe',
+                        'Código React directo',
+                        'Palette Color Tool'
+                    ],
+                    correct: 0
+                }
+            ]
+        };
+
+        const mentorsData = [
+            { name: 'Dra. Elena Ramos', role: 'Abogada de Integración Social', initials: 'ER', color: 'from-emerald-400 to-emerald-600' },
+            { name: 'Ing. Carlos Ruiz', role: 'Mentor de Operaciones Especializadas', initials: 'CR', color: 'from-vibrant-purple to-purple-800' },
+            { name: 'Lic. Sofía Montenegro', role: 'Asesora Psicolaboral', initials: 'SM', color: 'from-pink-500 to-pink-700' }
+        ];
+
+        // --- Estado General de la Sesión de Usuario ---
+        let activeProfile = 'lucia';
+        const appState = {
+            onboardingStep: 0,
+            currentJobIndex: 0,
+            xpProgress: 38,
+            globalPerformance: 38,
+            skillsCompleted: ['onboarding'],
+            appliedJobs: [],
+            activeMentorship: null,
+            bookingTemp: { mentor: null, date: null, time: null },
+            quizState: { type: 'logic_101', currentQuestion: 0, score: 0, selectedOption: null },
+            lastWellnessAudit: null
+        };
+
+        // --- Inicialización y Carga ---
+        window.onload = function() {
+            switchProfile('lucia');
+            updateOnboardingSlide();
+        };
+
+        // --- Cambio de Perfil (Lucía o Mateo) ---
+        function switchProfile(profileKey) {
+            playBeep('tap');
+            activeProfile = profileKey;
+            const p = profiles[profileKey];
+            
+            // Actualizar datos del estado
+            appState.globalPerformance = p.initialFit;
+            appState.xpProgress = p.initialFit;
+            appState.skillsCompleted = ['onboarding'];
+            appState.appliedJobs = [];
+            appState.activeMentorship = null;
+            
+            // UI exterior buttons
+            document.getElementById('btn-profile-lucia').className = profileKey === 'lucia' ? 
+                "px-4 py-2 rounded-xl text-xs font-bold bg-emerald-500 text-navy-950 shadow-lg shadow-emerald-500/20 active:scale-95 transition-all flex items-center gap-1.5" : 
+                "px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 border border-slate-700/85 hover:bg-slate-700 active:scale-95 transition-all flex items-center gap-1.5";
+            
+            document.getElementById('btn-profile-mateo').className = profileKey === 'mateo' ? 
+                "px-4 py-2 rounded-xl text-xs font-bold bg-emerald-500 text-navy-950 shadow-lg shadow-emerald-500/20 active:scale-95 transition-all flex items-center gap-1.5" : 
+                "px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 border border-slate-700/85 hover:bg-slate-700 active:scale-95 transition-all flex items-center gap-1.5";
+
+            // Actualizar interfaz del simulador
+            document.getElementById('dash-user-name').innerText = `Hola, ${p.name.split(' ')[0]}`;
+            document.getElementById('txt-badge-performance').innerText = p.badge;
+            document.getElementById('txt-score-performance').innerText = `${p.initialFit}%`;
+            document.getElementById('bar-performance-fill').style.width = `${p.initialFit}%`;
+            document.getElementById('dashboard-progress-fill').style.width = `${p.initialFit}%`;
+            document.getElementById('txt-xp-indicator').innerText = `${p.initialFit}% Completado`;
+            document.getElementById('txt-eval-feedback').innerText = p.feedback;
+            document.getElementById('dash-action-hint').innerHTML = `Completa el micro-módulo patrocinado para lograr el hito de adecuación total.`;
+
+            // Ocultar Widget Agenda
+            document.getElementById('widget-mentorship').classList.add('hidden');
+
+            renderJobsCarousel();
+            renderMentorsGrid();
+            renderTimelineRoute();
+
+            // Sincronizar el primer paso del Storyboard
+            triggerStoryboardStep(1);
+        }
+
+        // --- Sistema de Notificación Toast ---
+        function showNotification(title, msg, type = 'success') {
+            const toast = document.getElementById('toast-notification');
+            const icon = document.getElementById('toast-icon');
+            const tTitle = document.getElementById('toast-title');
+            const tMsg = document.getElementById('toast-msg');
+
+            tTitle.innerText = title;
+            tMsg.innerText = msg;
+
+            if (type === 'success') {
+                playBeep('success');
+                toast.className = "absolute top-12 left-3 right-3 bg-slate-900 border-l-4 border-emerald-500 p-3.5 rounded-2xl shadow-xl z-50 transform translate-y-0 opacity-100 transition-all duration-300 pointer-events-auto";
+                icon.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-400"></i>';
+            } else if (type === 'info') {
+                playBeep('tap');
+                toast.className = "absolute top-12 left-3 right-3 bg-slate-900 border-l-4 border-vibrant-purple p-3.5 rounded-2xl shadow-xl z-50 transform translate-y-0 opacity-100 transition-all duration-300 pointer-events-auto";
+                icon.innerHTML = '<i class="fa-solid fa-sparkles text-vibrant-purple"></i>';
+            } else {
+                playBeep('error');
+                toast.className = "absolute top-12 left-3 right-3 bg-slate-900 border-l-4 border-red-500 p-3.5 rounded-2xl shadow-xl z-50 transform translate-y-0 opacity-100 transition-all duration-300 pointer-events-auto";
+                icon.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-red-400"></i>';
+            }
+
+            setTimeout(() => {
+                toast.className = "absolute top-12 left-3 right-3 bg-slate-900 border border-slate-800 p-3.5 rounded-2xl shadow-xl z-50 transform -translate-y-24 opacity-0 transition-all duration-300 pointer-events-none";
+            }, 4000);
+        }
+
+        // --- Navegación del Simulador Móvil ---
+        function navigateTo(screenId) {
+            playBeep('tap');
+            document.querySelectorAll('.screen').forEach(screen => {
+                screen.classList.add('hidden');
+            });
+
+            document.getElementById('screen-' + screenId).classList.remove('hidden');
+
+            const nav = document.getElementById('main-nav');
+            if (screenId === 'onboarding') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                
+                // Actualizar estilos activos de la barra de navegación
+                document.querySelectorAll('#main-nav button').forEach(btn => {
+                    btn.classList.remove('text-emerald-400');
+                    btn.classList.add('text-slate-400');
+                });
+                
+                const activeNavBtn = document.getElementById('nav-' + screenId);
+                if (activeNavBtn) {
+                    activeNavBtn.classList.remove('text-slate-400');
+                    activeNavBtn.classList.add('text-emerald-400');
+                }
+            }
+
+            if (screenId === 'job-detail') {
+                setupJobDetailScreen();
+            }
+        }
+
+        // --- Controladores del Carrusel de Onboarding ---
+        function updateOnboardingSlide() {
+            const slide = onboardingSlides[appState.onboardingStep];
+            const contentArea = document.getElementById('onboarding-slide-content');
+            
+            contentArea.innerHTML = `
+                <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-emerald-500/20">
+                    ${slide.icon}
+                </div>
+                <h3 class="text-xl font-black tracking-tight text-white mb-3 leading-snug">${slide.title}</h3>
+                <p class="text-slate-400 text-xs px-2 leading-relaxed">${slide.desc}</p>
+            `;
+
+            document.querySelectorAll('.step-dot').forEach((dot, index) => {
+                if (index === appState.onboardingStep) {
+                    dot.className = "step-dot w-6 h-1.5 rounded-full bg-emerald-500 transition-all duration-300";
+                } else {
+                    dot.className = "step-dot w-2 h-1.5 rounded-full bg-slate-700 transition-all duration-300";
+                }
+            });
+
+            const nextBtn = document.getElementById('btn-next-onboarding');
+            if (appState.onboardingStep === onboardingSlides.length - 1) {
+                nextBtn.innerHTML = 'Comenzar Ahora <i class="fa-solid fa-arrow-right ml-2"></i>';
+            } else {
+                nextBtn.innerHTML = 'Siguiente <i class="fa-solid fa-arrow-right ml-2"></i>';
+            }
+        }
+
+        function nextOnboarding() {
+            if (appState.onboardingStep < onboardingSlides.length - 1) {
+                appState.onboardingStep++;
+                updateOnboardingSlide();
+                playBeep('tap');
+            } else {
+                skipOnboarding();
+            }
+        }
+
+        function skipOnboarding() {
+            navigateTo('dashboard');
+            const userName = profiles[activeProfile].name.split(' ')[0];
+            showNotification(`¡Bienvenido, ${userName}!`, "Tu perfil para empleadores ha sido activado correctamente.", "success");
+        }
+
+        // --- Renderizado de Vacantes en Dashboard ---
+        function renderJobsCarousel() {
+            const carousel = document.getElementById('dash-jobs-carousel');
+            carousel.innerHTML = '';
+            
+            jobsData.forEach((job, index) => {
+                const isApplied = appState.appliedJobs.includes(job.id);
+                const tagClass = isApplied ? "bg-emerald-500/20 text-emerald-400" : "bg-slate-800 text-slate-400";
+                const tagText = isApplied ? "<i class='fa-solid fa-paper-plane mr-1'></i> Postulado" : job.tag;
+                
+                // Determinar el fit técnico dinámico
+                let fitValue = job.baseMatch;
+                if (appState.skillsCompleted.includes(job.boostSkill)) {
+                    fitValue = 91;
+                }
+
+                carousel.innerHTML += `
+                    <div onclick="viewJob(${index})" class="min-w-[250px] max-w-[250px] bg-slate-900 border border-slate-800 hover:border-slate-700 p-4 rounded-2xl cursor-pointer transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-[8px] font-extrabold px-2 py-0.5 rounded-md ${tagClass}">${tagText}</span>
+                                <span class="text-[9px] font-black text-emerald-400">Fit: ${fitValue}%</span>
+                            </div>
+                            <h4 class="text-xs font-black text-white leading-snug line-clamp-2">${job.title}</h4>
+                            <p class="text-[10px] text-slate-400 mt-1">${job.company}</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800 mt-3 flex justify-between items-center text-[10px]">
+                            <span class="font-extrabold text-slate-200">${job.salary.split(' + ')[0]}</span>
+                            <i class="fa-solid fa-chevron-right text-slate-600 text-xs"></i>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // --- Detalle y Postulación de Empleos ---
+        function viewJob(index) {
+            appState.currentJobIndex = index;
+            navigateTo('job-detail');
+        }
+
+        function setupJobDetailScreen() {
+            const job = jobsData[appState.currentJobIndex];
+            document.getElementById('detail-title').innerText = job.title;
+            document.getElementById('detail-company').innerText = job.company;
+            document.getElementById('detail-salary').innerText = job.salary;
+
+            // Recalcular Fit Técnico de acuerdo a las habilidades completadas
+            let currentFit = job.baseMatch;
+            const boostAchieved = appState.skillsCompleted.includes(job.boostSkill);
+            if (boostAchieved) {
+                currentFit = 91;
+            }
+
+            document.getElementById('txt-detail-fit').innerText = `${currentFit}%`;
+            document.getElementById('bar-detail-fit').style.width = `${currentFit}%`;
+            
+            const explanationText = document.getElementById('txt-detail-fit-explanation');
+            if (currentFit === 91) {
+                explanationText.innerHTML = `✨ <strong>¡Adecuación Excelente!</strong> Cumples con la especialización de <strong>${getSkillTitle(job.boostSkill)}</strong> requerida por ${job.company} para contratación prioritaria.`;
+            } else {
+                explanationText.innerHTML = `Para calificar a la contratación inmediata por <strong>${job.company}</strong>, rinde el diagnóstico de <strong>${getSkillTitle(job.boostSkill)}</strong> patrocinado al 100%.`;
+            }
+
+            // Módulos requeridos
+            const containerCourses = document.getElementById('container-detail-courses');
+            containerCourses.innerHTML = '';
+            
+            job.skillsReq.forEach(skill => {
+                const completed = appState.skillsCompleted.includes(skill.code);
+                let buttonMarkup = '';
+                
+                if (completed) {
+                    buttonMarkup = `<span class="text-[8px] font-black bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded-md"><i class="fa-solid fa-circle-check mr-1"></i> Completado</span>`;
+                } else {
+                    buttonMarkup = `<button onclick="openQuiz('${skill.code}')" class="text-[9px] bg-vibrant-purple hover:bg-vibrant-purpleDark text-white font-black px-2.5 py-1.5 rounded-lg transition-all">Validar Diagnóstico</button>`;
+                }
+
+                containerCourses.innerHTML += `
+                    <div class="flex justify-between items-center bg-slate-950 p-2.5 rounded-xl border border-slate-800">
+                        <div>
+                            <h5 class="text-[10px] font-bold text-white">${skill.name}</h5>
+                            <p class="text-[8px] text-slate-500">Patrocinio: ${skill.sponsor}</p>
+                        </div>
+                        ${buttonMarkup}
+                    </div>
+                `;
+            });
+
+            // Botón Postulación
+            const applyBtn = document.getElementById('btn-apply-job');
+            if (appState.appliedJobs.includes(job.id)) {
+                applyBtn.innerHTML = '<i class="fa-solid fa-circle-check mr-1"></i> Postulación Completada';
+                applyBtn.className = "w-full py-4 bg-slate-900 border border-emerald-500/20 text-emerald-400 font-extrabold rounded-2xl text-xs uppercase tracking-wider cursor-not-allowed";
+                applyBtn.disabled = true;
+            } else {
+                applyBtn.innerHTML = 'Postulación Formal Directa';
+                applyBtn.className = "w-full py-4 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black rounded-2xl text-xs uppercase tracking-wider transition-all duration-200";
+                applyBtn.disabled = false;
+            }
+        }
+
+        function getSkillTitle(code) {
+            if (code === 'logic_101') return 'Lógica Operativa';
+            if (code === 'ux_fundamentals') return 'Fundamentos de Figma / UX';
+            return 'Especialidad';
+        }
+
+        function applyToCurrentJob() {
+            const jobId = jobsData[appState.currentJobIndex].id;
+            if (!appState.appliedJobs.includes(jobId)) {
+                appState.appliedJobs.push(jobId);
+                showNotification("¡Postulado Correctamente!", "Se ha generado un contrato en borrador respaldado por las normativas del MTPE.", "success");
+                setupJobDetailScreen();
+                renderJobsCarousel();
+                
+                // Mapear automáticamente a paso 8 en la guía
+                triggerStoryboardStep(8);
+            }
+        }
+
+        // --- Modal Todos los Empleos ---
+        function openAllJobsModal() {
+            playBeep('tap');
+            const listContainer = document.getElementById('all-jobs-list');
+            listContainer.innerHTML = '';
+
+            jobsData.forEach((job, index) => {
+                const isApplied = appState.appliedJobs.includes(job.id);
+                const applyTag = isApplied ? '<span class="text-[8px] font-black bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded-md">Postulado</span>' : '';
+                
+                let fitVal = job.baseMatch;
+                if (appState.skillsCompleted.includes(job.boostSkill)) {
+                    fitVal = 91;
+                }
+
+                listContainer.innerHTML += `
+                    <div onclick="selectJobFromAll(${index})" class="bg-slate-900 border border-slate-800 p-3.5 rounded-2xl flex justify-between items-center cursor-pointer hover:border-slate-700 transition-all">
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="text-[8px] font-extrabold bg-slate-950 text-slate-400 px-2 py-0.5 rounded-md">Verificado</span>
+                                ${applyTag}
+                            </div>
+                            <h4 class="text-xs font-black text-white">${job.title}</h4>
+                            <p class="text-[9px] text-slate-400">${job.company} · ${job.type}</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs font-black text-emerald-400">${fitVal}% Fit</span>
+                            <i class="fa-solid fa-chevron-right text-slate-600 text-xs ml-2"></i>
+                        </div>
+                    </div>
+                `;
+            });
+
+            document.getElementById('modal-all-jobs').classList.remove('hidden');
+        }
+
+        function closeAllJobsModal() {
+            document.getElementById('modal-all-jobs').classList.add('hidden');
+        }
+
+        function selectJobFromAll(index) {
+            closeAllJobsModal();
+            viewJob(index);
+        }
+
+        // --- Soporte Humano y Mentores ---
+        function renderMentorsGrid() {
+            const list = document.getElementById('mentors-list');
+            list.innerHTML = '';
+
+            mentorsData.forEach(mentor => {
+                list.innerHTML += `
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3 text-center flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 bg-gradient-to-tr ${mentor.color} rounded-full mx-auto mb-2 flex items-center justify-center text-slate-900 font-black text-xs border border-slate-800">
+                                ${mentor.initials}
+                            </div>
+                            <h4 class="text-[10px] font-black text-white leading-tight">${mentor.name}</h4>
+                            <p class="text-[8px] text-slate-500 mt-1 uppercase tracking-wider">${mentor.role.split(' ')[0]}</p>
+                        </div>
+                        <button onclick="openBookingModal('${mentor.name}')" class="w-full mt-3 py-1.5 bg-slate-950 hover:bg-emerald-500 hover:text-navy-950 text-slate-300 font-extrabold text-[9px] rounded-lg transition-all border border-slate-800">
+                            Agendar
+                        </button>
+                    </div>
+                `;
+            });
+        }
+
+        function openBookingModal(mentorName) {
+            playBeep('tap');
+            appState.bookingTemp.mentor = mentorName;
+            document.getElementById('booking-mentor-name').innerText = `Con ${mentorName} (Asistencia libre de costo)`;
+            document.querySelectorAll('.date-btn, .time-btn').forEach(btn => {
+                btn.classList.remove('border-emerald-500', 'bg-emerald-500/10', 'text-emerald-400');
+            });
+            document.getElementById('modal-booking').classList.remove('hidden');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('modal-booking').classList.add('hidden');
+        }
+
+        function selectBookingDate(date) {
+            playBeep('tap');
+            appState.bookingTemp.date = date;
+            const event = window.event;
+            document.querySelectorAll('.date-btn').forEach(btn => {
+                btn.classList.remove('border-emerald-500', 'bg-emerald-500/10', 'text-emerald-400');
+            });
+            event.currentTarget.classList.add('border-emerald-500', 'bg-emerald-500/10', 'text-emerald-400');
+        }
+
+        function selectBookingTime(time) {
+            playBeep('tap');
+            appState.bookingTemp.time = time;
+            const event = window.event;
+            document.querySelectorAll('.time-btn').forEach(btn => {
+                btn.classList.remove('border-emerald-500', 'bg-emerald-500/10', 'text-emerald-400');
+            });
+            event.currentTarget.classList.add('border-emerald-500', 'bg-emerald-500/10', 'text-emerald-400');
+        }
+
+        function confirmBooking() {
+            if (!appState.bookingTemp.date || !appState.bookingTemp.time) {
+                showNotification("Selección incompleta", "Debes escoger el día y horario.", "error");
+                return;
+            }
+            appState.activeMentorship = { ...appState.bookingTemp };
+            closeBookingModal();
+
+            document.getElementById('widget-mentor-detail').innerText = `${appState.activeMentorship.mentor} - ${appState.activeMentorship.date} a las ${appState.activeMentorship.time}`;
+            document.getElementById('widget-mentorship').classList.remove('hidden');
+
+            showNotification("¡Cita Confirmada!", `Mentoría agendada para ${appState.activeMentorship.date}.`, "success");
+            navigateTo('dashboard');
+        }
+
+        function cancelMentorship() {
+            appState.activeMentorship = null;
+            document.getElementById('widget-mentorship').classList.add('hidden');
+            showNotification("Cita Liberada", "Has cancelado la cita correctamente.", "info");
+        }
+
+        // --- Renderizado de Mapa de Aprendizaje (Timeline) ---
+        function renderTimelineRoute() {
+            const container = document.getElementById('career-timeline');
+            container.innerHTML = '';
+
+            const items = [
+                { title: 'Onboarding de Inserción', code: 'onboarding', desc: 'Introducción al clima laboral regular, marco de formalidad y derechos laborales en Perú.', completed: true },
+                { title: 'Lógica Operativa / Logística', code: 'logic_101', desc: 'Capacitación interactiva en la resolución lógica de stock, inventarios y despacho.', completed: appState.skillsCompleted.includes('logic_101') },
+                { title: 'UX Fundamentos & Figma', code: 'ux_fundamentals', desc: 'Creación de flujos de valor centrados en el usuario y diseño interactivo en baja fidelidad.', completed: appState.skillsCompleted.includes('ux_fundamentals') }
+            ];
+
+            items.forEach(item => {
+                let dotClass = item.completed ? "bg-emerald-500" : "bg-slate-800 border-2 border-slate-700";
+                let pulseEffect = (!item.completed && quizDatabases[item.code]) ? 'animate-ping' : '';
+                let statusBadge = item.completed ? 
+                    `<span class="text-[8px] font-black bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded-md">Completado</span>` : 
+                    `<span class="text-[8px] font-black bg-slate-800 text-slate-500 px-2 py-0.5 rounded-md">Por Validar</span>`;
+
+                let actionButton = (!item.completed && quizDatabases[item.code]) ? 
+                    `<button onclick="openQuiz('${item.code}')" class="mt-3 text-[9px] bg-vibrant-purple hover:bg-vibrant-purpleDark text-white font-black py-1 px-2.5 rounded-lg transition-all">Validar Ahora</button>` : '';
+
+                container.innerHTML += `
+                    <div class="relative">
+                        <!-- Indicador visual -->
+                        <div class="absolute left-[-31px] top-1.5 w-4.5 h-4.5 rounded-full bg-slate-950 flex items-center justify-center">
+                            <div class="w-2.5 h-2.5 rounded-full ${dotClass}"></div>
+                            <div class="absolute w-2.5 h-2.5 rounded-full ${dotClass} ${pulseEffect}"></div>
+                        </div>
+                        
+                        <div class="bg-slate-900 border border-slate-800/80 rounded-2xl p-4.5">
+                            <div class="flex justify-between items-center mb-1">
+                                ${statusBadge}
+                            </div>
+                            <h4 class="text-xs font-black text-white mt-1">${item.title}</h4>
+                            <p class="text-[9px] text-slate-400 mt-1 leading-normal">${item.desc}</p>
+                            ${actionButton}
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // --- Desafío Técnico / Evaluaciones Gamificadas ---
+        function openQuiz(quizType) {
+            playBeep('tap');
+            if (appState.skillsCompleted.includes(quizType)) {
+                showNotification("Aprobado", "Ya has validado satisfactoriamente esta competencia.", "success");
+                return;
+            }
+            appState.quizState.type = quizType;
+            appState.quizState.currentQuestion = 0;
+            appState.quizState.score = 0;
+            appState.quizState.selectedOption = null;
+
+            const header = document.getElementById('quiz-header-title');
+            header.innerText = quizType === 'logic_101' ? 'Módulo: Lógica Operativa' : 'Módulo: UX Fundamentos';
+
+            document.getElementById('modal-quiz').classList.remove('hidden');
+            renderQuizQuestion();
+        }
+
+        function closeQuiz() {
+            document.getElementById('modal-quiz').classList.add('hidden');
+        }
+
+        function renderQuizQuestion() {
+            const type = appState.quizState.type;
+            const qList = quizDatabases[type];
+            const qIdx = appState.quizState.currentQuestion;
+            const q = qList[qIdx];
+
+            const progress = ((qIdx) / qList.length) * 100;
+            document.getElementById('quiz-progress').style.width = `${progress}%`;
+
+            const area = document.getElementById('quiz-question-area');
+            area.innerHTML = `
+                <h3 class="text-xs font-black text-white leading-normal mb-4">${q.title}</h3>
+                <div class="flex flex-col gap-2">
+                    ${q.options.map((opt, i) => `
+                        <button onclick="selectQuizOption(${i})" class="quiz-opt-btn w-full p-4 text-left text-xs bg-slate-900 hover:bg-slate-850 border border-slate-800 rounded-2xl text-slate-300 focus:border-vibrant-purple transition-all">
+                            ${opt}
+                        </button>
+                    `).join('')}
+                </div>
+            `;
+
+            const actionBtn = document.getElementById('btn-quiz-action');
+            actionBtn.innerText = qIdx === qList.length - 1 ? 'Finalizar Desafío' : 'Siguiente';
+            appState.quizState.selectedOption = null;
+        }
+
+        function selectQuizOption(index) {
+            playBeep('tap');
+            appState.quizState.selectedOption = index;
+            const event = window.event;
+            document.querySelectorAll('.quiz-opt-btn').forEach(btn => {
+                btn.classList.remove('border-vibrant-purple', 'bg-slate-800');
+                btn.classList.add('border-slate-800');
+            });
+            event.currentTarget.classList.add('border-vibrant-purple', 'bg-slate-800');
+        }
+
+        function submitQuizAnswer() {
+            if (appState.quizState.selectedOption === null) {
+                showNotification("Acción Requerida", "Debes seleccionar una alternativa antes de continuar.", "error");
+                return;
+            }
+
+            const type = appState.quizState.type;
+            const qList = quizDatabases[type];
+            const qIdx = appState.quizState.currentQuestion;
+            const q = qList[qIdx];
+
+            if (appState.quizState.selectedOption === q.correct) {
+                appState.quizState.score++;
+            }
+
+            if (qIdx < qList.length - 1) {
+                appState.quizState.currentQuestion++;
+                renderQuizQuestion();
+            } else {
+                evaluateQuizResult();
+            }
+        }
+
+        function evaluateQuizResult() {
+            closeQuiz();
+            const type = appState.quizState.type;
+            const qList = quizDatabases[type];
+            const passed = appState.quizState.score === qList.length;
+
+            if (passed) {
+                appState.skillsCompleted.push(type);
+                appState.globalPerformance = 91; // Boost de fit según storyboard
+                appState.xpProgress = 91;
+
+                // Actualizar UI
+                document.getElementById('txt-score-performance').innerText = '91%';
+                document.getElementById('bar-performance-fill').style.width = '91%';
+                document.getElementById('dashboard-progress-fill').style.width = '91%';
+                document.getElementById('txt-xp-indicator').innerText = '91% Completado';
+                
+                document.getElementById('txt-badge-performance').innerText = 'Nivel Óptimo';
+                document.getElementById('txt-badge-performance').className = "text-[8px] font-black uppercase bg-vibrant-purple/15 text-vibrant-purple px-2 py-1 rounded-md border border-vibrant-purple/10";
+                
+                document.getElementById('txt-eval-feedback').innerHTML = `✨ Reclutadores informan: <strong>¡Match Aprobado!</strong> Tienes acceso al 100% de las vacantes y priorización salarial.`;
+                document.getElementById('dash-action-hint').innerHTML = `🏆 ¡Felicitaciones! Has completado el módulo técnico. Tu fit con los reclutadores ha incrementado al <strong>91%</strong>.`;
+
+                showNotification("¡Desafío Técnico Aprobado!", "Tu nivel ha subido automáticamente. Las áreas de selección han recibido la alerta.", "success");
+                
+                renderJobsCarousel();
+                renderTimelineRoute();
+                
+                // Mapear automáticamente a paso 6 en la guía
+                triggerStoryboardStep(6);
+            } else {
+                showNotification("No Aprobado", "Puedes volver a repasar el material patrocinado y reintentar.", "error");
+            }
+        }
+
+        // --- Chequeo Clínico y Clima Laboral (Paso 09) ---
+        function openWellnessModal() {
+            playBeep('tap');
+            document.getElementById('modal-wellness').classList.remove('hidden');
+        }
+
+        function closeWellnessModal() {
+            document.getElementById('modal-wellness').classList.add('hidden');
+        }
+
+        function selectWellnessChoice(qNum, value) {
+            playBeep('tap');
+            console.log(`Auditoría Pregunta ${qNum}: ${value}`);
+        }
+
+        function submitWellnessCheck() {
+            closeWellnessModal();
+            showNotification("Reporte Consolidado", "Tu evaluación de clima laboral ha sido guardada de forma anónima para resguardar la Ley de Trabajo.", "success");
+            
+            // Cambiar hito de bienestar en Dashboard
+            document.getElementById('dash-wellness-status').innerText = 'Bienestar: Auditado';
+            
+            // Mapear automáticamente a paso 9 en la guía
+            triggerStoryboardStep(9);
+        }
+
+        // --- SEGUIDOR Y MANIPULADOR DEL STORYBOARD (Columna Izquierda Interactiva) ---
+        function triggerStoryboardStep(stepNumber) {
+            playBeep('tap');
+            
+            // Remover estilos activos de todas las tarjetas de la guía
+            for (let i = 1; i <= 10; i++) {
+                const card = document.getElementById(`step-card-${i}`);
+                if (card) {
+                    card.classList.remove('bg-slate-900', 'border-slate-700', 'border-l-4', 'border-l-emerald-500', 'border-l-red-500', 'border-l-vibrant-purple', 'border-l-blue-500');
+                    card.classList.add('bg-slate-900/30', 'border-slate-800/40');
+                    
+                    const numDot = card.querySelector('div');
+                    if (numDot) {
+                        numDot.className = "w-6 h-6 rounded-full bg-slate-800 text-slate-400 font-bold text-xs flex items-center justify-center shrink-0 border border-slate-700/60";
+                    }
+                }
+            }
+
+            // Aplicar estilos destacados a la tarjeta activa
+            const activeCard = document.getElementById(`step-card-${stepNumber}`);
+            if (activeCard) {
+                activeCard.classList.remove('bg-slate-900/30', 'border-slate-800/40');
+                
+                let colorClass = 'border-l-emerald-500';
+                let dotClass = 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20';
+                
+                if (stepNumber === 1) {
+                    colorClass = 'border-l-red-500';
+                    dotClass = 'bg-red-500/10 text-red-400 border-red-500/20';
+                } else if (stepNumber === 3 || stepNumber === 5 || stepNumber === 6) {
+                    colorClass = 'border-l-vibrant-purple';
+                    dotClass = 'bg-vibrant-purple/10 text-vibrant-purple border-vibrant-purple/20';
+                } else if (stepNumber === 9) {
+                    colorClass = 'border-l-pink-500';
+                    dotClass = 'bg-pink-500/10 text-pink-400 border-pink-500/20';
+                }
+
+                activeCard.classList.add('bg-slate-900', 'border-slate-700', 'border-l-4', colorClass);
+                
+                const numDot = activeCard.querySelector('div');
+                if (numDot) {
+                    numDot.className = `w-6 h-6 rounded-full ${dotClass} font-bold text-xs flex items-center justify-center shrink-0 border`;
+                }
+            }
+
+            // Manipular el simulador móvil para que refleje el paso metodológico del Storyboard
+            const container = document.getElementById('screen-container');
+            
+            switch(stepNumber) {
+                case 1: // El Problema
+                    navigateTo('onboarding');
+                    appState.onboardingStep = 0;
+                    updateOnboardingSlide();
+                    break;
+                case 2: // Registro / Onboarding
+                    navigateTo('onboarding');
+                    appState.onboardingStep = 1;
+                    updateOnboardingSlide();
+                    break;
+                case 3: // Diagnóstico Técnico Inicial
+                    navigateTo('dashboard');
+                    showNotification("Análisis Inicial", "IA detecta 38% de adecuación técnica para puestos logísticos.", "info");
+                    break;
+                case 4: // Patrocinio
+                    navigateTo('job-detail');
+                    // Hacer foco en el primer puesto
+                    appState.currentJobIndex = 0;
+                    setupJobDetailScreen();
+                    break;
+                case 5: // Módulos Técnicos en App
+                    navigateTo('route');
+                    break;
+                case 6: // Fit sube a 91%
+                    navigateTo('dashboard');
+                    // Simulamos el boost
+                    appState.skillsCompleted.push('logic_101');
+                    appState.globalPerformance = 91;
+                    document.getElementById('txt-score-performance').innerText = '91%';
+                    document.getElementById('bar-performance-fill').style.width = '91%';
+                    document.getElementById('dashboard-progress-fill').style.width = '91%';
+                    renderJobsCarousel();
+                    showNotification("¡Fit Optimizado!", "Tu perfil ahora es visible prioritariamente con un 91% de adecuación.", "success");
+                    break;
+                case 7: // Algoritmo conecta talento
+                    navigateTo('dashboard');
+                    openAllJobsModal();
+                    break;
+                case 8: // Contrato formal verificado
+                    navigateTo('job-detail');
+                    appState.currentJobIndex = 0;
+                    setupJobDetailScreen();
+                    // Auto-postulamos
+                    if (!appState.appliedJobs.includes(0)) {
+                        appState.appliedJobs.push(0);
+                        setupJobDetailScreen();
+                    }
+                    showNotification("Contrato Seguro", "Contrato formal generado: Gratificaciones, CTS y seguro EsSalud verificados.", "success");
+                    break;
+                case 9: // Monitoreo mensual
+                    navigateTo('dashboard');
+                    openWellnessModal();
+                    break;
+                case 10: // Impacto positivo / Éxito
+                    navigateTo('dashboard');
+                    const userName = profiles[activeProfile].name.split(' ')[0];
+                    showNotification(`¡Felicidades, ${userName}!`, "Has completado satisfactoriamente el ciclo hacia el empleo digno formal.", "success");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
