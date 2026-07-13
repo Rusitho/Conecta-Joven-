@@ -29,8 +29,24 @@ Una vez ejecutado el flujo de despliegue, el sitio queda disponible en:
 
 A partir de ahí, cada `push` a la rama actualiza el sitio automáticamente.
 
+## Producto académico — Kit de Marca Personal
+
+Como parte de la Unidad IV (Marketing Personal), el repositorio incluye el
+**Kit de Marca Personal** (`marca-personal.html`): el producto académico completo
+para la Evaluación Final, con todo el contenido listo para copiar y personalizar:
+
+- Perfil de **LinkedIn** optimizado: foto/portada, titular, “Acerca de”,
+  educación, experiencia, aptitudes, **2 recomendaciones** y **1 publicación**.
+- Guion completo del **video de presentación bilingüe (Pitch Presentation)**
+  español–inglés (1:00–1:30 min) con las 4 secciones de la estructura pedida.
+- Rúbrica mapeada criterio por criterio y checklist de entrega.
+
+Disponible en: **https://rusitho.github.io/Conecta-Joven-/marca-personal.html**
+
 ## Estructura
 
 - `index.html` — Aplicación completa (HTML, CSS con Tailwind y JavaScript en un
   único archivo autónomo).
+- `marca-personal.html` — Kit de Marca Personal (producto académico de la
+  Evaluación Final).
 - `.nojekyll` — Evita el procesamiento Jekyll para un despliegue más rápido.

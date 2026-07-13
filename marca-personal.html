@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit de Marca Personal · Producto Académico — Evaluación Final</title>
+    <meta name="description" content="Producto académico completo para la Evaluación Final de Marca Personal: perfil de LinkedIn optimizado y guion de video pitch bilingüe (español–inglés), alineado a la rúbrica.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 950:'#030712', 900:'#0A192F', 800:'#112240', 700:'#1B305B', 600:'#233F73' },
+                        linkedin: '#0A66C2',
+                        emerald: { 400:'#34D399', 500:'#10B981', 600:'#059669' },
+                        vibrant: { purple:'#8B5CF6', purpleDark:'#6D28D9', pink:'#EC4899' }
+                    },
+                    fontFamily: { sans: ['Plus Jakarta Sans','sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        /* Campo editable: dato que el estudiante debe reemplazar */
+        .fill { background: linear-gradient(transparent 60%, #fde68a 60%); padding: 0 2px; border-radius: 2px; font-weight: 700; }
+        .copy-btn { transition: all .15s ease; }
+        .copy-btn:active { transform: scale(.94); }
+        details[open] > summary .chev { transform: rotate(90deg); }
+        .chev { transition: transform .2s ease; }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: #fff !important; }
+            .print-block { break-inside: avoid; }
+            details { open: true; }
+            details > div { display: block !important; }
+            a[href]::after { content: ""; }
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans antialiased">
+
+<!-- ============ NAV LATERAL / SUPERIOR ============ -->
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200 no-print">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2.5 min-w-0">
+            <span class="w-9 h-9 rounded-lg bg-gradient-to-br from-linkedin to-vibrant-purple flex items-center justify-center text-white shrink-0"><i class="fa-solid fa-id-badge"></i></span>
+            <div class="min-w-0">
+                <p class="font-extrabold text-slate-900 leading-tight truncate">Kit de Marca Personal</p>
+                <p class="text-[11px] text-slate-500 leading-tight truncate">Producto académico · Evaluación Final</p>
+            </div>
+        </div>
+        <nav class="hidden md:flex items-center gap-1 text-sm font-semibold text-slate-600">
+            <a href="#rubrica" class="px-3 py-1.5 rounded-lg hover:bg-slate-100">Rúbrica</a>
+            <a href="#linkedin" class="px-3 py-1.5 rounded-lg hover:bg-slate-100">LinkedIn</a>
+            <a href="#video" class="px-3 py-1.5 rounded-lg hover:bg-slate-100">Video Pitch</a>
+            <a href="#entrega" class="px-3 py-1.5 rounded-lg hover:bg-slate-100">Entrega</a>
+        </nav>
+        <button onclick="window.print()" class="copy-btn shrink-0 inline-flex items-center gap-2 bg-slate-900 text-white text-sm font-semibold px-3 py-2 rounded-lg hover:bg-slate-700">
+            <i class="fa-solid fa-print"></i><span class="hidden sm:inline">Imprimir / PDF</span>
+        </button>
+    </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+
+    <!-- ============ HERO ============ -->
+    <section class="text-center mb-10 print-block">
+        <div class="inline-flex flex-wrap justify-center gap-2 mb-4">
+            <span class="px-3 py-1 bg-linkedin/10 text-linkedin border border-linkedin/20 rounded-full text-xs font-bold tracking-wide uppercase">Marketing Personal</span>
+            <span class="px-3 py-1 bg-vibrant-purple/10 text-vibrant-purpleDark border border-vibrant-purple/20 rounded-full text-xs font-bold tracking-wide uppercase">Bilingüe ES · EN</span>
+            <span class="px-3 py-1 bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 rounded-full text-xs font-bold tracking-wide uppercase">Unidad IV</span>
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
+            Construcción de <span class="text-transparent bg-clip-text bg-gradient-to-r from-linkedin to-vibrant-purple">Marca Personal</span>
+        </h1>
+        <p class="mt-4 max-w-2xl mx-auto text-slate-600 leading-relaxed">
+            Producto académico completo para la <strong>Evaluación Final</strong>: perfil profesional en LinkedIn
+            optimizado y guion de <strong>video de presentación bilingüe (Pitch Presentation)</strong>. Todo el
+            contenido está listo para copiar, personalizar y presentar — alineado punto por punto con la rúbrica.
+        </p>
+    </section>
+
+    <!-- ============ BANNER PERSONALIZAR ============ -->
+    <div class="mb-10 rounded-2xl bg-amber-50 border border-amber-200 p-4 sm:p-5 flex gap-3 items-start print-block">
+        <span class="w-9 h-9 rounded-lg bg-amber-400/90 text-white flex items-center justify-center shrink-0"><i class="fa-solid fa-highlighter"></i></span>
+        <div class="text-sm text-amber-900">
+            <p class="font-bold mb-1">Cómo usar este kit</p>
+            <p class="leading-relaxed">Todo lo <span class="fill">resaltado en amarillo</span> es un dato que debes reemplazar con tu información real
+            (nombre, carrera, logros, empresa a la que postulas). El resto es una plantilla profesional de alta calidad que puedes
+            adaptar a tu voz. El ejemplo desarrollado corresponde a un(a) estudiante de <strong>Universidad Continental</strong> —
+            ajústalo a tu perfil.</p>
+        </div>
+    </div>
+
+    <!-- ============ RÚBRICA ============ -->
+    <section id="rubrica" class="mb-14 scroll-mt-24 print-block">
+        <div class="flex items-center gap-3 mb-5">
+            <span class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center"><i class="fa-solid fa-list-check"></i></span>
+            <div>
+                <h2 class="text-2xl font-extrabold text-slate-900">Rúbrica de evaluación</h2>
+                <p class="text-sm text-slate-500">5 criterios · máx. 4 puntos c/u · 20 puntos en total</p>
+            </div>
+        </div>
+        <div class="grid gap-3">
+            <!-- criterio -->
+            <div class="bg-white rounded-xl border border-slate-200 p-4 flex items-start gap-3">
+                <span class="mt-0.5 w-6 h-6 rounded-full bg-linkedin/10 text-linkedin text-xs font-bold flex items-center justify-center shrink-0">1</span>
+                <div>
+                    <p class="font-bold text-slate-900">Video · Presentación personal</p>
+                    <p class="text-sm text-slate-600">Nombre, formación, habilidades técnicas y experiencia, de forma clara, fluida y <strong>bilingüe</strong>. → <a href="#video" class="text-linkedin font-semibold">Ver guion §1</a></p>
+                </div>
+                <span class="ml-auto text-sm font-extrabold text-emerald-600 shrink-0">4 pts</span>
+            </div>
+            <div class="bg-white rounded-xl border border-slate-200 p-4 flex items-start gap-3">
+                <span class="mt-0.5 w-6 h-6 rounded-full bg-linkedin/10 text-linkedin text-xs font-bold flex items-center justify-center shrink-0">2</span>
+                <div>
+                    <p class="font-bold text-slate-900">Video · Expectativas, valor agregado y motivación</p>
+                    <p class="text-sm text-slate-600">Expone <strong>4 expectativas</strong>, <strong>4 características</strong> de valor y <strong>4 motivaciones</strong> con argumentos sólidos. → <a href="#video" class="text-linkedin font-semibold">Ver guion §2–4</a></p>
+                </div>
+                <span class="ml-auto text-sm font-extrabold text-emerald-600 shrink-0">4 pts</span>
+            </div>
+            <div class="bg-white rounded-xl border border-slate-200 p-4 flex items-start gap-3">
+                <span class="mt-0.5 w-6 h-6 rounded-full bg-linkedin/10 text-linkedin text-xs font-bold flex items-center justify-center shrink-0">3</span>
+                <div>
+                    <p class="font-bold text-slate-900">Calidad técnica y comunicación del video</p>
+                    <p class="text-sm text-slate-600">Duración (1:00–1:30) y formato correctos, buena imagen/audio, encuadre, tono claro y entusiasta. → <a href="#tecnico" class="text-linkedin font-semibold">Ver checklist técnico</a></p>
+                </div>
+                <span class="ml-auto text-sm font-extrabold text-emerald-600 shrink-0">4 pts</span>
+            </div>
+            <div class="bg-white rounded-xl border border-slate-200 p-4 flex items-start gap-3">
+                <span class="mt-0.5 w-6 h-6 rounded-full bg-linkedin/10 text-linkedin text-xs font-bold flex items-center justify-center shrink-0">4</span>
+                <div>
+                    <p class="font-bold text-slate-900">LinkedIn · 2 recomendaciones + publicación</p>
+                    <p class="text-sm text-slate-600">Al menos 2 recomendaciones de calidad y 1 publicación original/replicada con reflexión. → <a href="#recomendaciones" class="text-linkedin font-semibold">Ver textos</a></p>
+                </div>
+                <span class="ml-auto text-sm font-extrabold text-emerald-600 shrink-0">4 pts</span>
+            </div>
+            <div class="bg-white rounded-xl border border-slate-200 p-4 flex items-start gap-3">
+                <span class="mt-0.5 w-6 h-6 rounded-full bg-linkedin/10 text-linkedin text-xs font-bold flex items-center justify-center shrink-0">5</span>
+                <div>
+                    <p class="font-bold text-slate-900">LinkedIn · Foto perfil + portada + titular + educación + experiencia</p>
+                    <p class="text-sm text-slate-600">Todos los elementos del perfil correctos y bien cuidados. → <a href="#linkedin" class="text-linkedin font-semibold">Ver sección LinkedIn</a></p>
+                </div>
+                <span class="ml-auto text-sm font-extrabold text-emerald-600 shrink-0">4 pts</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PARTE 1: LINKEDIN ============ -->
+    <section id="linkedin" class="mb-16 scroll-mt-24">
+        <div class="rounded-2xl bg-gradient-to-r from-linkedin to-blue-500 text-white p-6 sm:p-8 mb-8 print-block">
+            <p class="text-xs font-bold uppercase tracking-widest text-blue-100">Evidencia 1</p>
+            <h2 class="text-2xl sm:text-3xl font-extrabold mt-1 flex items-center gap-3"><i class="fa-brands fa-linkedin"></i> Perfil profesional en LinkedIn</h2>
+            <p class="text-blue-50 mt-2 text-sm sm:text-base max-w-2xl">Optimiza cada sección con los textos de abajo. Al final, copia el enlace de tu perfil y súbelo al aula virtual.</p>
+        </div>
+
+        <!-- Fotos -->
+        <div class="grid sm:grid-cols-2 gap-4 mb-8">
+            <div class="bg-white rounded-xl border border-slate-200 p-5 print-block">
+                <h3 class="font-bold text-slate-900 flex items-center gap-2 mb-2"><i class="fa-solid fa-circle-user text-linkedin"></i> Foto de perfil</h3>
+                <ul class="text-sm text-slate-600 space-y-1.5 list-disc pl-5">
+                    <li>Rostro centrado, ocupa ~60% del cuadro, mirando a cámara.</li>
+                    <li>Fondo neutro y limpio; buena iluminación (luz natural de frente).</li>
+                    <li>Vestimenta formal o business-casual (la misma línea del video).</li>
+                    <li>Expresión cordial y profesional; foto reciente y a color.</li>
+                    <li>Resolución mínima 400×400 px, en formato cuadrado.</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-xl border border-slate-200 p-5 print-block">
+                <h3 class="font-bold text-slate-900 flex items-center gap-2 mb-2"><i class="fa-solid fa-panorama text-linkedin"></i> Foto de portada</h3>
+                <ul class="text-sm text-slate-600 space-y-1.5 list-disc pl-5">
+                    <li>Tamaño recomendado 1584×396 px.</li>
+                    <li>Imagen alineada a tu carrera: campus, código, laboratorio, ciudad, o un banner con tu especialidad.</li>
+                    <li>Puedes incluir una frase corta de valor y evitar textos que tapen tu foto de perfil (esquina inferior izquierda).</li>
+                    <li>Coherente con tu marca: mismos colores/tono que tu titular.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Titular -->
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden mb-6 print-block">
+            <div class="flex items-center justify-between px-5 py-3 bg-slate-50 border-b border-slate-200">
+                <h3 class="font-bold text-slate-900 flex items-center gap-2"><i class="fa-solid fa-heading text-linkedin"></i> Titular (Headline)</h3>
+                <button class="copy-btn no-print text-xs font-semibold text-linkedin border border-linkedin/30 rounded-lg px-2.5 py-1 hover:bg-linkedin/5" data-copy="#titular">Copiar</button>
+            </div>
+            <div class="p-5">
+                <p class="text-xs text-slate-500 mb-2">Elige y adapta una de estas opciones (máx. 220 caracteres):</p>
+                <div id="titular" class="space-y-3 text-slate-800">
+                    <p class="p-3 bg-slate-50 rounded-lg border border-slate-200"><strong>A.</strong> Estudiante de <span class="fill">Ingeniería de Sistemas</span> en Universidad Continental | Apasionado(a) por <span class="fill">el desarrollo de software y los datos</span> | Buscando prácticas para crear soluciones con impacto</p>
+                    <p class="p-3 bg-slate-50 rounded-lg border border-slate-200"><strong>B.</strong> Futuro(a) <span class="fill">Ingeniero(a) de Sistemas</span> · <span class="fill">Python · SQL · Metodologías Ágiles</span> · Enfocado(a) en tecnología para la empleabilidad juvenil (ODS 8)</p>
+                    <p class="p-3 bg-slate-50 rounded-lg border border-slate-200"><strong>C.</strong> <span class="fill">Nombre Apellido</span> | Estudiante de <span class="fill">Ingeniería de Sistemas</span> | Aprendiendo <span class="fill">cloud y análisis de datos</span> | Voluntariado & liderazgo estudiantil</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Acerca de -->
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden mb-6 print-block">
+            <div class="flex items-center justify-between px-5 py-3 bg-slate-50 border-b border-slate-200">
+                <h3 class="font-bold text-slate-900 flex items-center gap-2"><i class="fa-solid fa-user-pen text-linkedin"></i> Sección “Acerca de” (Resumen)</h3>
+                <button class="copy-btn no-print text-xs font-semibold text-linkedin border border-linkedin/30 rounded-lg px-2.5 py-1 hover:bg-linkedin/5" data-copy="#acercade">Copiar</button>
+            </div>
+            <div id="acercade" class="p-5 text-slate-700 leading-relaxed space-y-3 text-[15px]">
+                <p>Soy <span class="fill">[Nombre Apellido]</span>, estudiante de <span class="fill">Ingeniería de Sistemas</span> en la <strong>Universidad Continental</strong>, con una fuerte motivación por transformar problemas reales en soluciones tecnológicas útiles para las personas.</p>
+                <p>Durante mi formación he desarrollado competencias en <span class="fill">programación (Python, JavaScript), bases de datos (SQL) y metodologías ágiles (Scrum)</span>, complementadas con habilidades blandas como comunicación, trabajo en equipo y pensamiento analítico. Me interesa especialmente <span class="fill">el desarrollo de software y el análisis de datos</span> para generar impacto social y productivo.</p>
+                <p>Busco oportunidades de <span class="fill">prácticas preprofesionales</span> donde pueda aportar, seguir aprendiendo y contribuir a proyectos alineados con el <strong>trabajo decente y la empleabilidad (ODS 8)</strong>.</p>
+                <p class="text-slate-500 text-sm">🌐 Idiomas: Español (nativo) · Inglés (intermedio–avanzado) &nbsp;|&nbsp; 📩 Contacto: <span class="fill">tu-correo@continental.edu.pe</span></p>
+            </div>
+        </div>
+
+        <!-- Educación / Experiencia / Aptitudes -->
+        <div class="grid md:grid-cols-3 gap-4 mb-6">
+            <div class="bg-white rounded-xl border border-slate-200 p-5 print-block">
+                <h3 class="font-bold text-slate-900 flex items-center gap-2 mb-3"><i class="fa-solid fa-graduation-cap text-linkedin"></i> Educación</h3>
+                <p class="text-sm text-slate-700"><strong>Universidad Continental</strong><br><span class="fill">Ingeniería de Sistemas</span><br><span class="text-slate-500"><span class="fill">2022 – actualidad</span></span></p>
+                <p class="text-xs text-slate-500 mt-3">Añade cursos relevantes, proyectos, promedio destacado, certificaciones (p. ej. <span class="fill">inglés, cursos online</span>).</p>
+            </div>
+            <div class="bg-white rounded-xl border border-slate-200 p-5 print-block">
+                <h3 class="font-bold text-slate-900 flex items-center gap-2 mb-3"><i class="fa-solid fa-briefcase text-linkedin"></i> Experiencia <span class="text-xs font-normal text-slate-400">(opcional)</span></h3>
+                <p class="text-sm text-slate-700"><span class="fill">Cargo / Rol de voluntariado o proyecto</span><br><span class="fill">Organización</span><br><span class="text-slate-500"><span class="fill">Mes AAAA – Mes AAAA</span></span></p>
+                <p class="text-xs text-slate-500 mt-3">Si no tienes experiencia laboral, usa proyectos académicos, voluntariados o liderazgo estudiantil descritos con verbos de acción y logros.</p>
+            </div>
+            <div class="bg-white rounded-xl border border-slate-200 p-5 print-block">
+                <h3 class="font-bold text-slate-900 flex items-center gap-2 mb-3"><i class="fa-solid fa-lightbulb text-linkedin"></i> Aptitudes</h3>
+                <div class="flex flex-wrap gap-1.5 text-xs">
+                    <span class="fill px-2 py-1 rounded">Python</span>
+                    <span class="fill px-2 py-1 rounded">SQL</span>
+                    <span class="fill px-2 py-1 rounded">Scrum</span>
+                    <span class="fill px-2 py-1 rounded">Trabajo en equipo</span>
+                    <span class="fill px-2 py-1 rounded">Comunicación</span>
+                    <span class="fill px-2 py-1 rounded">Inglés</span>
+                </div>
+                <p class="text-xs text-slate-500 mt-3">Agrega 5–10 aptitudes; prioriza las técnicas y las blandas que menciones en tu video.</p>
+            </div>
+        </div>
+
+        <!-- Recomendaciones -->
+        <div id="recomendaciones" class="scroll-mt-24 mb-6">
+            <h3 class="text-lg font-extrabold text-slate-900 flex items-center gap-2 mb-3"><i class="fa-solid fa-comment-dots text-linkedin"></i> 2 Recomendaciones profesionales</h3>
+            <p class="text-sm text-slate-600 mb-4">Solicítalas a un docente, jefe de prácticas o líder de proyecto. Comparte con ellos estos modelos para facilitarles la redacción (deben escribirlas <strong>desde su propia cuenta</strong> en tu perfil → “Recomendaciones”).</p>
+            <div class="grid sm:grid-cols-2 gap-4">
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden print-block">
+                    <div class="flex items-center justify-between px-4 py-2.5 bg-slate-50 border-b border-slate-200">
+                        <p class="text-sm font-bold text-slate-700">Modelo · Docente / Académico</p>
+                        <button class="copy-btn no-print text-xs font-semibold text-linkedin border border-linkedin/30 rounded-lg px-2 py-0.5 hover:bg-linkedin/5" data-copy="#rec1">Copiar</button>
+                    </div>
+                    <p id="rec1" class="p-4 text-sm text-slate-700 leading-relaxed italic">“Tuve la oportunidad de acompañar a <span class="fill">[Nombre]</span> en <span class="fill">el curso/proyecto X</span>. Destaca por su responsabilidad, capacidad de análisis y compromiso con la calidad. Aporta ideas, cumple plazos y trabaja muy bien en equipo. Sin duda será un(a) gran profesional en <span class="fill">Ingeniería de Sistemas</span>.”</p>
+                </div>
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden print-block">
+                    <div class="flex items-center justify-between px-4 py-2.5 bg-slate-50 border-b border-slate-200">
+                        <p class="text-sm font-bold text-slate-700">Modelo · Jefe / Compañero de proyecto</p>
+                        <button class="copy-btn no-print text-xs font-semibold text-linkedin border border-linkedin/30 rounded-lg px-2 py-0.5 hover:bg-linkedin/5" data-copy="#rec2">Copiar</button>
+                    </div>
+                    <p id="rec2" class="p-4 text-sm text-slate-700 leading-relaxed italic">“Trabajé con <span class="fill">[Nombre]</span> en <span class="fill">[proyecto/voluntariado]</span> y demostró iniciativa, actitud proactiva y habilidades técnicas sólidas en <span class="fill">[tecnología]</span>. Comunica con claridad y siempre busca aprender. Lo(a) recomiendo ampliamente para roles que exijan compromiso y ganas de crecer.”</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publicación -->
+        <div id="publicacion" class="bg-white rounded-xl border border-slate-200 overflow-hidden mb-2 print-block scroll-mt-24">
+            <div class="flex items-center justify-between px-5 py-3 bg-slate-50 border-b border-slate-200">
+                <h3 class="font-bold text-slate-900 flex items-center gap-2"><i class="fa-solid fa-bullhorn text-linkedin"></i> 1 Publicación con reflexión</h3>
+                <button class="copy-btn no-print text-xs font-semibold text-linkedin border border-linkedin/30 rounded-lg px-2.5 py-1 hover:bg-linkedin/5" data-copy="#post">Copiar</button>
+            </div>
+            <div id="post" class="p-5 text-slate-700 leading-relaxed space-y-3 text-[15px]">
+                <p>🚀 Esta semana reflexioné sobre por qué la <strong>marca personal</strong> es tan importante para quienes recién iniciamos nuestra carrera.</p>
+                <p>Como estudiante de <span class="fill">Ingeniería de Sistemas</span>, aprendí que no basta con tener conocimientos técnicos: también hay que saber comunicarlos. Construir un perfil profesional claro, mostrar lo que sé hacer y conectar con personas de mi área me ayuda a abrir puertas hacia <span class="fill">prácticas y oportunidades reales</span>.</p>
+                <p>Mi conclusión: <em>tu marca personal es la historia que otros recuerdan de ti cuando no estás en la sala.</em> Vale la pena cuidarla con autenticidad. 💡</p>
+                <p class="text-sm text-slate-500">#MarcaPersonal #Empleabilidad #<span class="fill">IngenieríaDeSistemas</span> #UniversidadContinental #ODS8 #DesarrolloProfesional</p>
+            </div>
+        </div>
+        <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-circle-info"></i> Publica durante las <strong>dos semanas de la Unidad IV</strong>. Puedes crear un post original o compartir uno existente <em>añadiendo tu comentario personal</em> (el texto de arriba sirve como comentario reflexivo).</p>
+    </section>
+
+    <!-- ============ PARTE 2: VIDEO PITCH ============ -->
+    <section id="video" class="mb-16 scroll-mt-24">
+        <div class="rounded-2xl bg-gradient-to-r from-vibrant-purpleDark to-vibrant-pink text-white p-6 sm:p-8 mb-8 print-block">
+            <p class="text-xs font-bold uppercase tracking-widest text-purple-100">Evidencia 2</p>
+            <h2 class="text-2xl sm:text-3xl font-extrabold mt-1 flex items-center gap-3"><i class="fa-solid fa-video"></i> Video de Presentación Profesional</h2>
+            <p class="text-purple-50 mt-2 text-sm sm:text-base max-w-2xl">Pitch bilingüe (español–inglés) de <strong>1:00 a 1:30 min</strong>, con vestimenta formal. Abajo tienes el guion completo listo para memorizar o usar como teleprompter.</p>
+        </div>
+
+        <!-- Contexto -->
+        <div class="bg-white rounded-xl border border-slate-200 p-5 mb-6 text-sm text-slate-600 print-block">
+            <p><strong class="text-slate-900">Escenario:</strong> Postulaste a una reconocida empresa, superaste la evaluación curricular y ahora te piden grabar un video como parte del proceso de selección. Habla con seguridad, sé auténtico(a) y comunica lo que te apasiona — la autenticidad genera conexión.</p>
+        </div>
+
+        <!-- GUION -->
+        <div class="space-y-5">
+
+            <!-- §1 EN -->
+            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden print-block">
+                <div class="flex items-center justify-between px-5 py-3 bg-vibrant-purple/5 border-b border-slate-200">
+                    <h3 class="font-bold text-slate-900 flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-vibrant-purpleDark text-white text-xs font-bold flex items-center justify-center">1</span> Presentación personal <span class="text-xs font-bold text-white bg-vibrant-purpleDark px-2 py-0.5 rounded ml-1">EN INGLÉS</span></h3>
+                    <span class="text-xs font-semibold text-slate-400">~0:00 – 0:30</span>
+                </div>
+                <div class="p-5 text-slate-700 leading-relaxed text-[15px]">
+                    <p class="italic">“Hello! My name is <span class="fill">[Nombre Apellido]</span>. I'm a <span class="fill">Systems Engineering</span> student at <strong>Universidad Continental</strong>. I have solid skills in <span class="fill">programming with Python and SQL, agile methodologies, and data analysis</span>, and strong soft skills such as teamwork, clear communication, and problem-solving. <span class="fill">During my studies I have worked on academic projects and volunteering that helped me grow professionally.</span> I'm excited to share why I would be a great fit for your company.”</p>
+                    <p class="mt-3 text-xs text-slate-500"><i class="fa-solid fa-language"></i> Traducción de apoyo: “Hola, mi nombre es […]. Soy estudiante de […] en la Universidad Continental. Tengo competencias en […] y habilidades blandas como […]. Durante mis estudios he participado en proyectos y voluntariados que me ayudaron a crecer. Me entusiasma compartir por qué encajaría bien en su empresa.”</p>
+                </div>
+            </div>
+
+            <!-- §2 -->
+            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden print-block">
+                <div class="flex items-center justify-between px-5 py-3 bg-vibrant-purple/5 border-b border-slate-200">
+                    <h3 class="font-bold text-slate-900 flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-vibrant-purpleDark text-white text-xs font-bold flex items-center justify-center">2</span> ¿Cuáles son tus expectativas laborales? <span class="text-[11px] text-slate-400 font-normal">(4 puntos clave)</span></h3>
+                    <span class="text-xs font-semibold text-slate-400">~0:30 – 0:55</span>
+                </div>
+                <div class="p-5 text-slate-700 leading-relaxed text-[15px]">
+                    <p class="italic">“My professional expectations are, <strong>first</strong>, <span class="fill">to complete a preprofessional internship where I can apply what I've learned</span>; <strong>second</strong>, <span class="fill">to keep learning from an experienced team</span>; <strong>third</strong>, <span class="fill">to contribute to real projects with measurable impact</span>; and <strong>fourth</strong>, <span class="fill">to grow toward a role in software development or data analysis</span>.”</p>
+                    <p class="mt-3 text-xs text-slate-500"><i class="fa-solid fa-language"></i> “Mis expectativas laborales son: <strong>primero</strong>, […]; <strong>segundo</strong>, […]; <strong>tercero</strong>, […]; y <strong>cuarto</strong>, […].” &nbsp;<span class="text-vibrant-purpleDark font-semibold">→ Menciona exactamente 4 para el máximo puntaje.</span></p>
+                </div>
+            </div>
+
+            <!-- §3 -->
+            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden print-block">
+                <div class="flex items-center justify-between px-5 py-3 bg-vibrant-purple/5 border-b border-slate-200">
+                    <h3 class="font-bold text-slate-900 flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-vibrant-purpleDark text-white text-xs font-bold flex items-center justify-center">3</span> ¿Qué valor agregado ofreces? <span class="text-[11px] text-slate-400 font-normal">(4 características)</span></h3>
+                    <span class="text-xs font-semibold text-slate-400">~0:55 – 1:15</span>
+                </div>
+                <div class="p-5 text-slate-700 leading-relaxed text-[15px]">
+                    <p class="italic">“What I bring to your company: <strong>(1)</strong> <span class="fill">strong technical foundations in programming and databases</span>; <strong>(2)</strong> <span class="fill">fast learning and adaptability</span>; <strong>(3)</strong> <span class="fill">a proactive, results-oriented attitude</span>; and <strong>(4)</strong> <span class="fill">an intermediate–advanced English level that lets me work in international environments</span>.”</p>
+                    <p class="mt-3 text-xs text-slate-500"><i class="fa-solid fa-language"></i> “El valor que aporto: (1) […]; (2) […]; (3) […]; (4) […].” &nbsp;<span class="text-vibrant-purpleDark font-semibold">→ 4 características concretas.</span></p>
+                </div>
+            </div>
+
+            <!-- §4 -->
+            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden print-block">
+                <div class="flex items-center justify-between px-5 py-3 bg-vibrant-purple/5 border-b border-slate-200">
+                    <h3 class="font-bold text-slate-900 flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-vibrant-purpleDark text-white text-xs font-bold flex items-center justify-center">4</span> ¿Qué te motiva a postular? <span class="text-[11px] text-slate-400 font-normal">(4 razones + cierre)</span></h3>
+                    <span class="text-xs font-semibold text-slate-400">~1:15 – 1:30</span>
+                </div>
+                <div class="p-5 text-slate-700 leading-relaxed text-[15px]">
+                    <p class="italic">“I want to join your company because <strong>(1)</strong> <span class="fill">I admire its innovation and reputation</span>; <strong>(2)</strong> <span class="fill">it aligns with my professional goals</span>; <strong>(3)</strong> <span class="fill">it offers real growth and learning opportunities</span>; and <strong>(4)</strong> <span class="fill">I want to contribute to projects that create value for people</span>. Thank you very much for your time — I would be honored to be part of your team!”</p>
+                    <p class="mt-3 text-xs text-slate-500"><i class="fa-solid fa-language"></i> “Quiero postular porque: (1) […]; (2) […]; (3) […]; (4) […]. ¡Muchas gracias por su tiempo, sería un honor formar parte de su equipo!”</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="copy-btn no-print mt-4 inline-flex items-center gap-2 bg-vibrant-purpleDark text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-vibrant-purple" data-copy="#video">
+            <i class="fa-solid fa-copy"></i> Copiar guion completo
+        </button>
+
+        <!-- Checklist técnico -->
+        <div id="tecnico" class="mt-8 grid sm:grid-cols-2 gap-4 scroll-mt-24">
+            <div class="bg-white rounded-xl border border-slate-200 p-5 print-block">
+                <h3 class="font-bold text-slate-900 flex items-center gap-2 mb-3"><i class="fa-solid fa-clapperboard text-vibrant-purpleDark"></i> Checklist técnico</h3>
+                <ul class="text-sm text-slate-600 space-y-2">
+                    <li class="flex gap-2"><i class="fa-regular fa-square-check text-emerald-500 mt-0.5"></i> Duración entre <strong>1:00 y 1:30 min</strong> (crítico para el puntaje).</li>
+                    <li class="flex gap-2"><i class="fa-regular fa-square-check text-emerald-500 mt-0.5"></i> Vestimenta <strong>formal</strong>, como para una entrevista.</li>
+                    <li class="flex gap-2"><i class="fa-regular fa-square-check text-emerald-500 mt-0.5"></i> Cámara horizontal, a la altura de los ojos, encuadre pecho-cabeza.</li>
+                    <li class="flex gap-2"><i class="fa-regular fa-square-check text-emerald-500 mt-0.5"></i> Buena luz frontal; fondo ordenado y neutro.</li>
+                    <li class="flex gap-2"><i class="fa-regular fa-square-check text-emerald-500 mt-0.5"></i> Audio claro (ambiente silencioso; micrófono cerca).</li>
+                    <li class="flex gap-2"><i class="fa-regular fa-square-check text-emerald-500 mt-0.5"></i> Mira a la cámara, sonríe y transmite energía.</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-xl border border-slate-200 p-5 print-block">
+                <h3 class="font-bold text-slate-900 flex items-center gap-2 mb-3"><i class="fa-solid fa-microphone-lines text-vibrant-purpleDark"></i> Tips de comunicación</h3>
+                <ul class="text-sm text-slate-600 space-y-2">
+                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-vibrant-purpleDark mt-0.5"></i> Ensaya 3–4 veces y cronometra antes de grabar.</li>
+                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-vibrant-purpleDark mt-0.5"></i> Habla a ritmo pausado; vocaliza las partes en inglés.</li>
+                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-vibrant-purpleDark mt-0.5"></i> Usa gestos naturales; evita leer fijo la pantalla.</li>
+                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-vibrant-purpleDark mt-0.5"></i> Empieza con energía y cierra con un agradecimiento.</li>
+                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-vibrant-purpleDark mt-0.5"></i> Graba varias tomas y elige la mejor.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ENTREGA ============ -->
+    <section id="entrega" class="mb-12 scroll-mt-24 print-block">
+        <div class="flex items-center gap-3 mb-5">
+            <span class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center"><i class="fa-solid fa-paper-plane"></i></span>
+            <h2 class="text-2xl font-extrabold text-slate-900">Entrega en el aula virtual</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+            <div class="bg-white rounded-xl border border-slate-200 p-5">
+                <h3 class="font-bold text-slate-900 mb-2"><i class="fa-brands fa-linkedin text-linkedin"></i> Enlace de LinkedIn</h3>
+                <p class="text-sm text-slate-600">Copia la URL pública de tu perfil (Perfil → “Contacto” → tu URL, ej. <span class="fill text-xs">linkedin.com/in/tu-usuario</span>) y súbela al aula.</p>
+            </div>
+            <div class="bg-white rounded-xl border border-slate-200 p-5">
+                <h3 class="font-bold text-slate-900 mb-2"><i class="fa-brands fa-google-drive text-emerald-600"></i> Enlace del video</h3>
+                <p class="text-sm text-slate-600">Súbelo a Google Drive/YouTube y comparte el enlace. Si usas Drive, <strong>habilita el acceso para tu docente</strong> (“Cualquiera con el enlace”).</p>
+            </div>
+        </div>
+        <div class="mt-4 rounded-xl bg-emerald-50 border border-emerald-200 p-4 text-sm text-emerald-900">
+            <p class="font-bold mb-2"><i class="fa-solid fa-list-check"></i> Checklist final de entrega</p>
+            <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1.5">
+                <li>☐ Foto de perfil + portada profesionales</li>
+                <li>☐ Titular y “Acerca de” completos</li>
+                <li>☐ Educación y experiencia cargadas</li>
+                <li>☐ 2 recomendaciones recibidas</li>
+                <li>☐ 1 publicación con reflexión (Unidad IV)</li>
+                <li>☐ Video bilingüe 1:00–1:30, formal</li>
+                <li>☐ Enlace de LinkedIn en el aula</li>
+                <li>☐ Enlace del video con acceso al docente</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="text-center text-xs text-slate-400 pt-6 border-t border-slate-200 no-print">
+        <p>Kit de Marca Personal · Producto académico para la Evaluación Final — Marketing Personal (Unidad IV).</p>
+        <p class="mt-1">Parte del proyecto <a href="index.html" class="text-linkedin font-semibold">Conecta Joven</a> · Empleabilidad juvenil (ODS 8).</p>
+    </footer>
+</main>
+
+<!-- Toast -->
+<div id="toast" class="no-print fixed bottom-5 left-1/2 -translate-x-1/2 translate-y-16 opacity-0 transition-all duration-300 bg-slate-900 text-white text-sm font-semibold px-4 py-2.5 rounded-lg shadow-lg z-50">
+    <i class="fa-solid fa-check text-emerald-400"></i> Copiado al portapapeles
+</div>
+
+<script>
+    function showToast(){
+        const t = document.getElementById('toast');
+        t.classList.remove('translate-y-16','opacity-0');
+        setTimeout(()=>t.classList.add('translate-y-16','opacity-0'), 1800);
+    }
+    document.querySelectorAll('[data-copy]').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+            const el = document.querySelector(btn.dataset.copy);
+            if(!el) return;
+            const text = el.innerText.trim();
+            navigator.clipboard.writeText(text).then(showToast).catch(()=>{
+                const ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta);
+                ta.select(); document.execCommand('copy'); ta.remove(); showToast();
+            });
+        });
+    });
+</script>
+</body>
+</html>
